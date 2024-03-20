@@ -1,13 +1,18 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+I'm a second year undergraduate student from [School of Physics and Technology](https://physics.whu.edu.cn/),[Wuhan University](https://www.whu.edu.cn/). I'm still learning stuff about physics.
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+I have some cool classmates who also create their own personal homepages. I think it's neccessary to introduce them to you. [LDepression](https://ldepressi0n.github.io/LDepressi0n.io/)
+
+As a normal student, I don't have any research results yet. But I wrote some notes at [Zhihu](https://www.zhihu.com/people/mao-ke-xiang-24), you might find something interesting there. Whatever, something wrong with Zhihu happened, which makes the fomulars blur in the app. I'm sorry about that, and I choose to create a personal homepage to save my lecture notes and essays. 
+
+If you are my classmate aiming to check whether your homework is still in my place, please go to ().
 
 A data-driven personal website
 ======
