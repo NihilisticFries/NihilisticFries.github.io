@@ -12,6 +12,6 @@ I have some cool classmates who also create their own personal homepages. I thin
 
 As a normal student, I don't have any research results yet. But I wrote some notes at [Zhihu](https://www.zhihu.com/people/mao-ke-xiang-24), you might find something interesting there. Whatever, something wrong with Zhihu happened, which makes the fomulars blur in the app. I'm sorry about that, and I choose to create a personal homepage to save my lecture notes and essays. 
 
-如果你是我的同学，是来查看是否有作业还寄存在我这的，可以去[Teaching](https://nihilisticfries.github.io/teaching/)目录下寻找。
+如果你是我的同学，是来查看是否有作业还寄存在我这的，可以去[Teaching](https://nihilisticfries.github.io/teaching/)目录下寻找。（点这里也可以）
 
-If you are my classmate aiming to check whether your homework is still in my place, please go to [Teaching](https://nihilisticfries.github.io/teaching/).
+If you are my classmate aiming to check whether your homework is still in my place, please go to [Teaching](https://nihilisticfries.github.io/teaching/).(click)
