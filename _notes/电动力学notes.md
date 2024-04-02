@@ -89,7 +89,7 @@ $\nabla\times\vec{E}=0$
 $\nabla^2\frac{1}{r}=-4\pi\delta(\vec{x}-\vec{r'})$
 
 所以可以直接对电场求散度：
-$$\nabla_x\cdot\vec{E}(\vec{x})=\int_{\infty}\frac{\rho(\vec{r'})}{4\pi\varepsilon_0}\nabla^2(-\frac{1}{r}){\rm d}^3\vec{r'}=\int_{\infty}\frac{\rho(\vec{r'})}{\varepsilon_0}\delta(\vec{x}-\vec{r'}){\rm d}^3\vec{r'}=\frac{\rho(\vec{x})}{\varepsilon_0}$$
+
 
 即高斯定理：
 $\nabla\cdot\vec{E}=\frac{\rho}{\varepsilon_0}$
