@@ -53,7 +53,7 @@ $\nabla_x=\nabla;-\nabla'=\nabla$
 $\vec{r}$
 有关的场）
 
-对于某个试探电荷$Q$，其受到库仑力：
+对于某个试探电荷 $Q$ ，其受到库仑力：
 $$\vec{F}=Q(\sum_i\frac{q_i}{4\pi\varepsilon_0r_i^2})$$
 
 由于力的矢量合原理，我们直接得到了电场的叠加原理：
