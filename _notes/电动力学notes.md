@@ -67,7 +67,7 @@ $$\vec{E}=\sum_i\frac{q_i}{4\pi\varepsilon_0r_i^2}$$
 $$\vec{E}(\vec{x})=\int_{\infty}\frac{\rho(\vec{r'})}{4\pi\varepsilon_0r^2}\hat{r}{\rm d}^3\vec{r'}$$
 
 简单地从这个式子推导出高斯定律是电磁学中的内容，这里直接数学观察。
-$\frac{\hat{r}}{r^2}=-\nabla(\frac{1}{r})$，则
+$\frac{\hat{r}}{r^2}=-\nabla(\frac{1}{r})$ ，则
 
 $$\vec{E}(\vec{x})=\int_{\infty}\frac{\rho(\vec{r'})}{4\pi\varepsilon_0}\nabla(-\frac{1}{r}){\rm d}^3\vec{r'}=-\nabla_{x}\int_{\infty}\frac{\rho(\vec{r'})}{4\pi\varepsilon_0r}{\rm d}^3\vec{r'}$$
 
@@ -78,7 +78,7 @@ $$V(\vec{x})=\int_{\infty}\frac{\rho(\vec{r'})}{4\pi\varepsilon_0r}{\rm d}^3\vec
 $\vec{E}(\vec{x})=-\nabla V(\vec{x})$
 
 又注意到：
-${\rm rot}\cdot{\rm grad}\equiv 0$，所以$\nabla\times(\frac{\hat{r}}{r^2})=\nabla\times\nabla(-\frac{1}{r})=0\quad$
+${\rm rot}\cdot{\rm grad}\equiv 0$ ，所以 $\nabla\times(\frac{\hat{r}}{r^2})=\nabla\times\nabla(-\frac{1}{r})=0\quad$
 
 $$\nabla_x\times\vec{E}(\vec{x})=\int_{\infty}\frac{\rho(\vec{r'})}{4\pi\varepsilon_0}\nabla\times\nabla(-\frac{1}{r}){\rm d}^3\vec{r'}=0$$
 
