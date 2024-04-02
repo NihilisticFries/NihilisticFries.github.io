@@ -211,7 +211,7 @@ $\nabla\cdot\vec{B}=0$
 $$\frac{{\rm d}}{{\rm d}t}\int_{\Omega} \rho(\vec{r'}){\rm d}^3\vec{r'}=\oint_{\partial \Omega}\vec{J}(\vec{r'})\cdot{\rm d}\vec{S'}\\ \Rightarrow\int_{\Omega} \frac{\partial}{\partial t}\rho(\vec{r'}){\rm d}^3\vec{r'}=\oint_{\partial \Omega}\vec{J}(\vec{r'})\cdot{\rm d}\vec{S'}\\ \Rightarrow\int_{\Omega} \frac{\partial}{\partial t}\rho(\vec{r'}){\rm d}^3\vec{r'}=\int_\Omega\nabla'\cdot\vec{J}(\vec{r'}){\rm d}^3\vec{r'}\\ \Rightarrow\int_{\Omega} \Big(\frac{\partial}{\partial t}\rho(\vec{r'})-\nabla'\cdot\vec{J}(\vec{r'})\Big){\rm d}^3\vec{r'}=0$$
 由 $\Omega$ 任意性得到： $\frac{\partial \rho}{\partial t}+\nabla\cdot\vec{J}=0$
 
-对于一个电流分布，我们认为其对应的电荷密度分布不变，也就是实验上常考虑的稳恒电流情况，这时$\frac{\partial \rho}{\partial t}=0$，这就直接对电流密度加了一个很强的约束：
+对于一个电流分布，我们认为其对应的电荷密度分布不变，也就是实验上常考虑的稳恒电流情况，这时 $\frac{\partial \rho}{\partial t}=0$ ，这就直接对电流密度加了一个很强的约束：
 
 $$\nabla\cdot\vec{J}=0$$
 
