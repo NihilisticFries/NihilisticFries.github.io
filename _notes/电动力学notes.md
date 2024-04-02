@@ -116,7 +116,7 @@ $$\vec{F}=I\int_\Gamma {\rm d}\vec{l}\times\vec{B}$$
 
 这就是电流线在磁场中受安培力的表达式。
 
-如果考虑一个二维面上有运动的电荷，可以看作在二维面上有一个矢量场$\vec{K}$，为表征流向（一维的时候不用定方向，因为线的切矢已经定义好方向了）所以定义成了矢量，本质上是二维面上的切空间中的矢量。
+如果考虑一个二维面上有运动的电荷，可以看作在二维面上有一个矢量场 $\vec{K}$ ，为表征流向（一维的时候不用定方向，因为线的切矢已经定义好方向了）所以定义成了矢量，本质上是二维面上的切空间中的矢量。
 
 可以这样表征流过面上某个线段元的电荷量：
 
@@ -142,7 +142,7 @@ $${\rm d}q=\vec{J}\cdot{\rm d}\vec{S}{\rm d}t$$
 可以推出：
 $$\vec{J}\cdot{\rm d}\vec{S}=\frac{{\rm d}q}{{\rm d}t}=\frac{{\rm d}q}{{\rm d}V}\frac{{\rm d}V}{{\rm d}t}=\rho\frac{{\rm d}V}{{\rm d}t}$$
 
-再利用 $\vec{J}\cdot{\rm d}\vec{S}=J{\rm d}a_\perp$，${\rm d}V={\rm d}a_{\perp}{\rm d}l_{\parallel}$
+再利用 $\vec{J}\cdot{\rm d}\vec{S}=J{\rm d}a_\perp$， ${\rm d}V={\rm d}a_{\perp}{\rm d}l_{\parallel}$
 
 $$J=\rho\frac{{\rm d}l_{\parallel}}{{\rm d}t}\Rightarrow\vec{J}=\rho\vec{v}$$
 
@@ -158,7 +158,7 @@ $$\vec{B}(\vec{x})=\int_\Gamma \frac{\mu_0}{4\pi}\frac{I{\rm d}\vec{r'}\times\ha
 这是用电流元做实验得到的结果，经过上述定义，可以自然地推广：
 $$I=\vec{J}\cdot{\rm d}\vec{S}=\vec{K}\cdot{\rm d}\vec{l}$$
 
-自然地$I{\rm d}\vec{r'}$表征了电流方向，有：
+自然地 $I{\rm d}\vec{r'}$ 表征了电流方向，有：
 
 $$I{\rm d}\vec{r'}=\vec{J}{\rm d}V=\vec{K}{\rm d}a$$
 
@@ -208,8 +208,8 @@ $$\nabla\cdot\vec{B}=\nabla\cdot(\nabla\times\vec{A})=0$$
 $\nabla\cdot\vec{B}=0$
 
 我们知道由于电荷守恒：
-$$\frac{{\rm d}}{{\rm d}t}\int_{\Omega} \rho(\vec{r'}){\rm d}^3\vec{r'}=\oint_{\partial \Omega}\vec{J}(\vec{r'})\cdot{\rm d}\vec{S'}\\\Rightarrow\int_{\Omega} \frac{\partial}{\partial t}\rho(\vec{r'}){\rm d}^3\vec{r'}=\oint_{\partial \Omega}\vec{J}(\vec{r'})\cdot{\rm d}\vec{S'}\\\Rightarrow\int_{\Omega} \frac{\partial}{\partial t}\rho(\vec{r'}){\rm d}^3\vec{r'}=\int_\Omega\nabla'\cdot\vec{J}(\vec{r'}){\rm d}^3\vec{r'}\\\Rightarrow\int_{\Omega} \Big(\frac{\partial}{\partial t}\rho(\vec{r'})-\nabla'\cdot\vec{J}(\vec{r'})\Big){\rm d}^3\vec{r'}=0$$
-由$\Omega$任意性得到：$\frac{\partial \rho}{\partial t}+\nabla\cdot\vec{J}=0$
+$$\frac{{\rm d}}{{\rm d}t}\int_{\Omega} \rho(\vec{r'}){\rm d}^3\vec{r'}=\oint_{\partial \Omega}\vec{J}(\vec{r'})\cdot{\rm d}\vec{S'}\\ \Rightarrow\int_{\Omega} \frac{\partial}{\partial t}\rho(\vec{r'}){\rm d}^3\vec{r'}=\oint_{\partial \Omega}\vec{J}(\vec{r'})\cdot{\rm d}\vec{S'}\\ \Rightarrow\int_{\Omega} \frac{\partial}{\partial t}\rho(\vec{r'}){\rm d}^3\vec{r'}=\int_\Omega\nabla'\cdot\vec{J}(\vec{r'}){\rm d}^3\vec{r'}\\ \Rightarrow\int_{\Omega} \Big(\frac{\partial}{\partial t}\rho(\vec{r'})-\nabla'\cdot\vec{J}(\vec{r'})\Big){\rm d}^3\vec{r'}=0$$
+由 $\Omega$ 任意性得到： $\frac{\partial \rho}{\partial t}+\nabla\cdot\vec{J}=0$
 
 对于一个电流分布，我们认为其对应的电荷密度分布不变，也就是实验上常考虑的稳恒电流情况，这时$\frac{\partial \rho}{\partial t}=0$，这就直接对电流密度加了一个很强的约束：
 
@@ -217,13 +217,13 @@ $$\nabla\cdot\vec{J}=0$$
 
 参考电场的考虑，现在考虑磁场的旋度，为了方便，可以直接考虑磁矢势：
 
-$$\nabla_x\times\vec{B}(\vec{x})=\nabla_x\times(\nabla_x\times\vec{A}(\vec{x}))=\nabla_x(\nabla_x\cdot\vec{A}(\vec{x}))-\nabla_x^2\vec{A}(\vec{x})\\=\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\nabla_x\cdot\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'})-\int_\Omega\frac{\mu_0}{4\pi}\nabla_x^2\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\\=\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})-\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\nabla^2\frac{1}{r}{\rm d}^3\vec{r'}\\=\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})-\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})(-4\pi\delta(\vec{x}-\vec{r'})){\rm d}^3\vec{r'}\\=\int_\Omega\mu_0\vec{J}(\vec{r'})\delta(\vec{x}-\vec{r'}){\rm d}^3\vec{r'}+\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})\\=\mu_0\vec{J}(\vec{x})+\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})$$
+$$\nabla_x\times\vec{B}(\vec{x})=\nabla_x\times(\nabla_x\times\vec{A}(\vec{x}))=\nabla_x(\nabla_x\cdot\vec{A}(\vec{x}))-\nabla_x^2\vec{A}(\vec{x})\\ =\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\nabla_x\cdot\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'})-\int_\Omega\frac{\mu_0}{4\pi}\nabla_x^2\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\\ =\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})-\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\nabla^2\frac{1}{r}{\rm d}^3\vec{r'}\\ =\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})-\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})(-4\pi\delta(\vec{x}-\vec{r'})){\rm d}^3\vec{r'}\\ =\int_\Omega\mu_0\vec{J}(\vec{r'})\delta(\vec{x}-\vec{r'}){\rm d}^3\vec{r'}+\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})\\ =\mu_0\vec{J}(\vec{x})+\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})$$
 
 考察
 $\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'}$
 这一项积分式，看着能凑高斯定理的形式：
 
-$$\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'}=\frac{\mu_0}{4\pi}\int_\Omega\vec{J}(\vec{r'})\cdot(\nabla'(-\frac{1}{r})){\rm d}^3\vec{r'}\\=\frac{\mu_0}{4\pi}\Big(\int_\Omega\big(\vec{J}(\vec{r'})\cdot(\nabla'(-\frac{1}{r}))+(-\frac{1}{r})\nabla'\cdot\vec{J}(\vec{r'})\big){\rm d}^3\vec{r'}\Big)+\frac{\mu_0}{4\pi}\int_\Omega\frac{\nabla'\cdot\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\\=\frac{\mu_0}{4\pi}\int_\Omega\nabla'\cdot(-\frac{\vec{J}(\vec{r'})}{r}){\rm d}^3\vec{r'}+\frac{\mu_0}{4\pi}\int_\Omega\frac{\nabla'\cdot\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\\=-\frac{\mu_0}{4\pi}\int_{\partial\Omega}\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}+\frac{\mu_0}{4\pi}\int_\Omega\frac{\nabla'\cdot\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}$$
+$$\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'}=\frac{\mu_0}{4\pi}\int_\Omega\vec{J}(\vec{r'})\cdot(\nabla'(-\frac{1}{r})){\rm d}^3\vec{r'}\\ =\frac{\mu_0}{4\pi}\Big(\int_\Omega\big(\vec{J}(\vec{r'})\cdot(\nabla'(-\frac{1}{r}))+(-\frac{1}{r})\nabla'\cdot\vec{J}(\vec{r'})\big){\rm d}^3\vec{r'}\Big)+\frac{\mu_0}{4\pi}\int_\Omega\frac{\nabla'\cdot\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\\ =\frac{\mu_0}{4\pi}\int_\Omega\nabla'\cdot(-\frac{\vec{J}(\vec{r'})}{r}){\rm d}^3\vec{r'}+\frac{\mu_0}{4\pi}\int_\Omega\frac{\nabla'\cdot\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\\ =-\frac{\mu_0}{4\pi}\int_{\partial\Omega}\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}+\frac{\mu_0}{4\pi}\int_\Omega\frac{\nabla'\cdot\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}$$
 
 我们对我们考虑的电流场做两个基本的假设：
 > （1）电流场是稳恒电流场，即 $\nabla'\cdot\vec{J}(\vec{r'})\equiv 0$ <br> （2）我们考虑的积分域 $\Omega$ 囊括了一个连通的有电流密度的区域，即 $\vec{J}(\vec{r'})|_{\vec{r'}\in {\partial \Omega}}\equiv \vec{0}$
@@ -243,6 +243,7 @@ $$\nabla_x\times\vec{B}(\vec{x})=\mu_0\vec{J}(\vec{x})$$
 至此，我们得到了毕-萨实验定律的数学推论。
 
 这时我们可以总结出：
+
 $$\begin{cases} \nabla \cdot \vec{E}=\frac{\rho}{\varepsilon_0} \\\nabla\times\vec{E}=0\\  \nabla \cdot\vec{B}=0 \\ \nabla\times\vec{B}=\mu_0\vec{J}\end{cases}$$
 
 这直接是两个实验定律的数学推论，对电磁场的散度和旋度进行了一定程度的描述。
@@ -264,6 +265,7 @@ $$\int_{D}(\nabla\times\vec{E})\cdot{\rm d}\vec{l}=-\int_D\frac{\partial}{\parti
 这是对感生电场的描述，如果将这种电场与我们原来讨论的静电场合成，自然还是有这一点。也就是说，电场的旋度总和磁场的随时变化有关。
 
 这时方程变为：
+
 $$\begin{cases} \nabla \cdot \vec{E}=\frac{\rho}{\varepsilon_0} \\ \nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t} \\  \nabla \cdot\vec{B}=0 \\ \nabla\times\vec{B}=\mu_0\vec{J}\end{cases}$$
 
 我们已经知道了磁能生电，并加到了这组方程当中。问题是没有电回到磁的机制，也就是说如果电磁规律如此，那么某种程度上宇宙中电场会远多于磁场。从一些哲学思辨中（比如《斐多篇》中苏格拉底关于生与死相互转换的讨论），我们可以有这样的信念——磁应该也要能生电。（注：这里关于哲学的引证只是一种阐释，其实也有不能相互转换的东西，比如热能这种无序的能量不能再不付出任何代价地变成有序的能量，其实关键的是对理论本身的理解以及提出猜想可能的理由）
