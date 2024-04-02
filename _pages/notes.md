@@ -1,10 +1,10 @@
 ---
-permalink: /non-menu-page/
+permalink: /notes/
 title: "Page not in menu"
 author_profile: true
 redirect_from: 
-  - "/nmp/"
-  - "/nmp.html"
+  - "/notes/"
+  - "/notes.html"
 ---
 
 This is a page not in the menu. You can use markdown in this page.
