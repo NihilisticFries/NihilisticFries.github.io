@@ -228,7 +228,7 @@ $$\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^
 
 $$\nabla_x\times\vec{B}(\vec{x})=\mu_0\vec{J}(\vec{x})$$
 
-也就是所谓的安培定律：$\nabla\times\vec{B}=\mu_0\vec{J}$
+也就是所谓的安培定律： $\nabla\times\vec{B}=\mu_0\vec{J}$
 
 至此，我们得到了毕-萨实验定律的数学推论。
 
