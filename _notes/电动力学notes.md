@@ -178,4 +178,23 @@ $$\vec{B}(\vec{x})=\int_D\frac{\mu_0}{4\pi}\frac{\vec{K}{\rm d}a\times\hat{r}}{r
 由于可以显然地观察到：
 $$\vec{B}(\vec{x})=\int_\Omega \frac{\mu_0}{4\pi}\frac{\vec{J}(\vec{r'})\times\hat{r}}{r^2}{\rm d}^3\vec{r'}=\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\times\nabla(-\frac{1}{r}){\rm d}^3\vec{r'}$$
 
+而 $\nabla\times(\frac{1}{r}\vec{J}(\vec{r'}))=\nabla(\frac{1}{r})\times\vec{J}(\vec{r'})+\frac{1}{r}\nabla\times\vec{J}(\vec{r'})$
+
+实际上 ${J}(\vec{r'})$ 与 $\vec{x}$ 无关，所以 $\nabla_x\times\vec{J}(\vec{r'})=\vec{0}$
+
+进而： $\nabla_x\times(\frac{1}{r}\vec{J}(\vec{r'}))=\nabla_x(\frac{1}{r})\times\vec{J}(\vec{r'})=\vec{J}(\vec{r'})\times\nabla(-\frac{1}{r})$
+
+所以可以确定磁场一定有：
+$$\vec{B}(\vec{x})=\int_\Omega\frac{\mu_0}{4\pi}\nabla_x\times(\frac{1}{r}\vec{J}(\vec{r'})){\rm d}^3\vec{r'}=\nabla_{x}\times\int_\Omega\frac{\mu_0}{4\pi}\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}$$
+
+可以定义磁矢势：
+$$\vec{A}(\vec{x})=\int_\Omega\frac{\mu_0}{4\pi}\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}$$
+
+所以磁场一定可以表达成一个矢量场的旋度场：
+$\vec{B}=\nabla\times\vec{A}$
+
+注意到 ${\rm div}\cdot{\rm rot}\equiv 0$，所以：
+
+$$\nabla\cdot\vec{B}=\nabla\cdot(\nabla\times\vec{A})=0$$
+
 ---
