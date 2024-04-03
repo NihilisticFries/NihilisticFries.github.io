@@ -427,11 +427,7 @@ $$\begin{align}\int_{\Omega_j}[V(\vec{r'})\nabla'^2G(\vec{r'}\mid\vec{x})-G(\vec
 
 $$\begin{align}V(x)&=\int_{\Omega_j}[V(\vec{r'})\nabla'^2G(\vec{r'}\mid\vec{x})-G(\vec{r'}\mid\vec{x})\nabla'^2V(\vec{r'})]{\rm d}^3\vec{r'}+\int_{\Omega_j}G(\vec{x}\mid\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}\\\\& =\int_{\Omega_j}G(\vec{x}\mid\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}+\int_{\partial\Omega_j}[V(\vec{r'})\partial_n'G(\vec{r'}\mid\vec{x})-G(\vec{r'}\mid\vec{x})\partial_n'V(\vec{r'})]{\rm d}S'\end{align}$$
 
-有两种处理面积分的路径：
- $V(\vec{r'})\partial_n'G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\partial_n'V(\vec{r'})|_{\vec{r'}\in\partial\Omega_j}\\=V(\vec{r'})[\frac{\alpha}{\beta}G(\vec{r'}|\vec{x})+\partial_n'G(\vec{r'}|\vec{x})]|_{\vec{r'}\in\partial\Omega_j}-G(\vec{r'}|\vec{x})[\frac{\alpha}{\beta}V(\vec{r'})+\partial_n'V(\vec{r'})]|_{\vec{r'}\in\partial\Omega_j}\\=-\frac{1}{\beta}G(\vec{x}|\vec{r'})B(\vec{r'})|_{\vec{r'}\in\Omega_j}$
-
-或者：
- $V(\vec{r'})\partial_n'G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\partial_n'V(\vec{r'})|_{\vec{r'}\in\partial\Omega_j}\\=-\partial_n'V(\vec{r'})[G(\vec{r'}|\vec{x})+\frac{\beta}{\alpha}\partial_n'G(\vec{r'}|\vec{x})]|_{\vec{r'}\in\partial\Omega_j}+\partial_n'G(\vec{r'}|\vec{x})[V(\vec{r'})+\frac{\beta}\alpha \partial_nV(\vec{r'})]|_{\vec{r'}\in\partial\Omega_j}\\=\frac{1}{\alpha}\partial_nG(\vec{x}|\vec{r'})B(\vec{r'})|_{\vec{r'}\in\Omega_j}$
+有两种处理面积分的路径（ $\alpha$ 或 $\beta$ ），总之利用边界条件可以得到
 
 即我们可以给出形式上的解：
 $$V(\vec{x})=\int_{\Omega_j}G(\vec{x}\mid\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}-\frac{1}{\beta}\int_{\partial\Omega_j}G(\vec{x}\mid\vec{r'})B(\vec{r'}){\rm d}S'$$
@@ -445,10 +441,11 @@ $$V(\vec{x})=\int_{\Omega_j}G(\vec{x}\mid\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}+\
 我们已经初见静电学基本方程边界问题解的存在唯一性了，是从格林函数和数学物理方法的结论上看出来的。实际上距离我们常见的情况，还有一点点距离。另外不算一个特别严谨的证明。我们常见的情况是，一个存在一个导体组的空间，这个空间中的自由电荷都在导体中。对于这样一个问题，解是否有存在唯一性。
 
 此时蕴含的边界条件是：取通过一种线性各向同性介质，其边界有三种情况：
->（1）导体的边界：由于静电平衡时，导体中没有电场（不然导体内电荷继续移动），导体是一个等势体；另外导体在不接触其它导体（大地）时电荷守恒。所以导体的边界条件有两类：导体的电势；导体上总电荷量。<br>（2）无穷远边界：我们认为场在无穷远处为0，所以在无穷远边界上，场的面积分总是0，所以我们可以忽略掉无穷远面积分的大小，直接取为0<br>（3）介质的交界面：有介质交界面的边界条件。实际上我们认为自由电荷只存在于导体中，所以有边界条件 $\vec{E}_{i\tau}=\vec{E}_{j\tau}\quad \varepsilon_i\vec{E}_{in}=\varepsilon_j\vec{E}_{jn}$
+>（1）导体的边界：由于静电平衡时，导体中没有电场（不然导体内电荷继续移动），导体是一个等势体；另外导体在不接触其它导体（大地）时电荷守恒。所以导体的边界条件有两类：导体的电势；导体上总电荷量。<br>（2）无穷远边界：我们认为场在无穷远处为0，所以在无穷远边界上，场的面积分总是0，所以我们可以忽略掉无穷远面积分的大小，直接取为0<br>（3）介质的交界面：有介质交界面的边界条件。实际上我们认为自由电荷只存在于导体中，所以有边界条件  $\vec{E} _{i\tau}=\vec{E} _{j\tau} \quad \varepsilon_i\vec{E} _{in}=\varepsilon_j\vec{E} _{jn}$
 
 考虑一个导体组，作为一个带点体系，一定激发一个电场。这个体系的能量是：
-$$W=\sum_j\int_{\Omega_j}\frac{1}{2}\vec{E}\cdot\vec{D}{\rm d}^3\vec{x}=\frac{1}{2}\sum_j\int_{\Omega_j}(\nabla V)\cdot(\varepsilon_j\nabla V){\rm d}^3\vec{x}\\=\frac{1}{2}\sum_j\int_{\Omega_j}[\nabla\cdot(V\varepsilon_j\nabla V)-V\nabla\cdot(\varepsilon_j\nabla V)]{\rm d}^3\vec{x}\\=\frac{1}{2}\sum_j\int_{\Omega_j}[\nabla\cdot(V\varepsilon_j\nabla V)-V\nabla\cdot\vec{D}]{\rm d}^3\vec{x}$$
+
+$$\begin{align}W=&\sum_j\int_{\Omega_j}\frac{1}{2}\vec{E}\cdot\vec{D}{\rm d}^3\vec{x}=\frac{1}{2}\sum_j\int_{\Omega_j}(\nabla V)\cdot(\varepsilon_j\nabla V){\rm d}^3\vec{x}\\\\& =\frac{1}{2}\sum_j\int_{\Omega_j}[\nabla\cdot(V\varepsilon_j\nabla V)-V\nabla\cdot(\varepsilon_j\nabla V)]{\rm d}^3\vec{x}\\\\& =\frac{1}{2}\sum_j\int_{\Omega_j}[\nabla\cdot(V\varepsilon_j\nabla V)-V\nabla\cdot\vec{D}]{\rm d}^3\vec{x}\end{align}$$
 
 我们要求了非导体中没有自由电荷，所以 $\nabla\cdot\vec{D}=0$ ，即：
 $$W=\frac{1}{2}\sum_j\int_{\Omega_j}\nabla\cdot(V\varepsilon_j\nabla V){\rm d}^3\vec{x}=\frac{1}{2}\sum_j\oint_{\partial\Omega_j}V\varepsilon_j\partial_n V{\rm d}S_j$$
@@ -464,14 +461,35 @@ $$W=\frac{1}{2}\sum_j\int_{\Omega_j}\nabla\cdot(V\varepsilon_j\nabla V){\rm d}^3
 
 $$W=-\frac{1}{2}\sum_i\oint_{\partial\Omega_i}V\varepsilon\partial_n V{\rm d}S_i=-\frac{1}{2}\sum_i V_i\oint_{\partial\Omega_i}\varepsilon\partial_n V{\rm d}S_i$$
 
-考虑对导体表面用高斯定理：$\sigma_i=D_{n_i}=\varepsilon(-\partial_nV)$，则：
+考虑对导体表面用高斯定理： $\sigma_i=D_{n_i}=\varepsilon(-\partial_nV)$ ，则：
 
 $$W=\frac{1}{2}\sum_i V_i\oint_{\partial\Omega_i}\sigma_i{\rm d}S_i=\frac{1}{2}\sum_i V_iQ_i$$
 
 这样，整个场被转移到导体表面的性质上去了。这个结果也符合我们的物理预期。
 
 从上面导体组的讨论中，我们收到启发，给出静电唯一性定理的阐述：
->定理1：静电唯一性定理：<br>对于一个空间，其中有若干个导体，导体都有界（保证无穷远电势为0）。导体之外的空间中分块充满了各种线性各向同性介质，且这些空间中可以分布一些自由电荷。给定各导体上的电势或总电荷量，方程的解唯一确定。<br>证明：相当于一个分块满足方程$\nabla^2V=-\frac{\rho_0}{\varepsilon_j}$，并在导体边界上配有$V|_{\partial \Omega_i}=V_i$或$\oint_{\partial\Omega_i}-\varepsilon\partial_nV{\rm d}S_i=Q_i$的边界条件。<br>假设有两个满足这个边值问题的解$V_1, V_2$，由于方程是一个线性方程，且边界条件也是线性的，取$V=V_1-V_2$，则$V$满足的方程为：$$\begin{cases} \nabla^2V=0\\V|_{\partial \Omega_i}=0 \quad{\rm or}\quad\oint_{\partial\Omega_i}-\varepsilon\partial_nV{\rm d}S_i=0\end{cases} $$且介质交界面的没有自由电荷。我们期望此时没有电场，即体系没有电场能。取：$$W=\frac{1}{2}\sum_j\int_{\Omega_j}\varepsilon_j(\nabla V)^2{\rm d}^3\vec{x}=-\frac{1}{2}\sum_i\oint_{\partial\Omega_i}V\varepsilon\partial_n V{\rm d}S_i$$不管是电势边界条件还是总电荷边界条件，对于每一个$i$，$\oint_{\partial\Omega_i}V\varepsilon\partial_n V{\rm d}S_i=0$，所以：$$\sum_j\int_{\Omega_j}\varepsilon_j(\nabla V)^2{\rm d}^3\vec{x}=0$$由 $(\nabla V)^2$的非负性知：$\nabla V\equiv0$，即$\nabla V_1\equiv\nabla V_2$<br>得到两个满足原方程的电场解一定是相同的$\vec{E}_1=\vec{E}_2$
+>定理1：静电唯一性定理：
+>
+>对于一个空间，其中有若干个导体，导体都有界（保证无穷远电势为0）。导体之外的空间中分块充满了各种线性各向同性介质，且这些空间中可以分布一些自由电荷。给定各导体上的电势或总电荷量，方程的解唯一确定。
+>
+>证明：相当于一个分块满足方程 $\nabla^2V=-\frac{\rho_0}{\varepsilon_j}$ ，并在导体边界上配有 $V\mid_{\partial \Omega_i}=V_i$ 或 $\oint_{\partial\Omega_i}-\varepsilon\partial_nV{\rm d}S_i=Q_i$ 的边界条件。
+>
+>假设有两个满足这个边值问题的解 $V_1, V_2$ ，由于方程是一个线性方程，且边界条件也是线性的，取 $V=V_1-V_2$ ，则 $V$ 满足的方程为：
+>
+>$$\begin{cases} \nabla^2V=0\\\\ V\mid_{\partial \Omega_i}=0 \quad {\rm or} \quad\oint_{\partial\Omega_i}-\varepsilon\partial_n V{\rm d}S_i=0\end{cases} $$
+>
+>且介质交界面的没有自由电荷。我们期望此时没有电场，即体系没有电场能。取：
+>
+>$$W=\frac{1}{2}\sum_j\int_{\Omega_j}\varepsilon_j(\nabla V)^2{\rm d}^3\vec{x}=-\frac{1}{2}\sum_i\oint_{\partial\Omega_i}V\varepsilon\partial_n V{\rm d}S_i$$
+>
+>不管是电势边界条件还是总电荷边界条件，对于每一个 $i$ ，
+>$\oint_{\partial\Omega_i} V \varepsilon \partial_n V{\rm d} S_i = 0$ ，所以：
+>
+>$$\sum_j \int_{\Omega_j}\varepsilon_j(\nabla V)^2{\rm d}^3\vec{x}=0 $$
+>
+>由 $(\nabla V)^2$ 的非负性知： $\nabla V \equiv 0$  ，即 $\nabla V_1\equiv\nabla V_2$
+>
+>得到两个满足原方程的电场解一定是相同的 $\vec{E} _1=\vec{E} _2$
 
 我们证明了，对于我们常见的导体组情况，电场的解一定是唯一的，这就是静电唯一性定理。这说明一件事：对于一个导体组，给定一些边界条件，如果我猜出了它的解，那就不可能有其它解，那我猜的解就是唯一正确的解。以此为基础，可以发展电像法。
 
