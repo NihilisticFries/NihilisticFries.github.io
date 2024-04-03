@@ -519,7 +519,7 @@ $$W=\frac{1}{2}\sum_i V_i\oint_{\partial\Omega_i}\sigma_i{\rm d}S_i=\frac{1}{2}\
 
 此时径向分离变量结果为：
 
-$$\begin{align}\frac{ {\rm d}}{ {\rm d}r}(r^2\frac{ {\rm d}}{ {\rm d}r}R(r))-l(l+1)R(r)=0\\\\ \Rightarrow r^2\frac{{\rm d}^2}{{\rm d}r^2}R(r)+2r\frac{ {\rm d}}{ {\rm d}r}R(r)-l(l+1)R(r)=0\end{align}$$   
+$$\begin{align}\frac{ {\rm d}}{ {\rm d}r}(r^2\frac{ {\rm d}}{ {\rm d}r}R(r))-l(l+1)R(r)=0\\\\ \Rightarrow r^2\frac{ {\rm d}^2}{ {\rm d}r^2}R(r)+2r\frac{ {\rm d}}{ {\rm d}r}R(r)-l(l+1)R(r)=0\end{align}$$   
 
 这是一个欧拉方程，在常微分方程中讨论过这一方程的求解办法。令 $t=\ln r$，记 $D\equiv\frac{ {\rm d}}{ {\rm d}t}=\frac{ {\rm d}r}{ {\rm d}t}\frac{ {\rm d}}{ {\rm d}r}=r\frac{ {\rm d}}{ {\rm d}r}$，$y(t)\equiv R(r)$ ，得：
 
