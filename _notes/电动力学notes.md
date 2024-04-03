@@ -157,4 +157,25 @@ $$\vec{F}=\int_\Omega\vec{v}\times\vec{B}{\rm d}q=\int_\Omega(\rho\vec{v})\times
 
 $$\vec{B}(\vec{x})=\int_\Gamma \frac{\mu_0}{4\pi}\frac{I{\rm d}\vec{r'}\times\hat{r}}{r^2}$$
 
+这是用电流元做实验得到的结果，经过上述定义，可以自然地推广：
+$$I=\vec{J}\cdot{\rm d}\vec{S}=\vec{K}\cdot{\rm d}\vec{l}$$
+
+自然地$I{\rm d}\vec{r'}$表征了电流方向，有：
+
+$$I{\rm d}\vec{r'}=\vec{J}{\rm d}V=\vec{K}{\rm d}a$$
+
+对于三维：
+
+$$\vec{B}(\vec{x})=\int_\Omega \frac{\mu_0}{4\pi}\frac{\vec{J}{\rm d}V\times\hat{r}}{r^2}=\int_\Omega \frac{\mu_0}{4\pi}\frac{\vec{J}(\vec{r'})\times\hat{r}}{r^2}{\rm d}^3\vec{r'}$$
+
+对于二维面：
+$$\vec{B}(\vec{x})=\int_D\frac{\mu_0}{4\pi}\frac{\vec{K}{\rm d}a\times\hat{r}}{r^2}=\int_D \frac{\mu_0}{4\pi}\frac{\vec{K}(\vec{r'})\times\hat{r}}{r^2}{\rm d}a'$$
+
+形式上没什么区别，就像体电荷密度和面点和密度积出电场时地形式是一样的。
+
+这里只对三维情况进行讨论。
+
+由于可以显然地观察到：
+$$\vec{B}(\vec{x})=\int_\Omega \frac{\mu_0}{4\pi}\frac{\vec{J}(\vec{r'})\times\hat{r}}{r^2}{\rm d}^3\vec{r'}=\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\times\nabla(-\frac{1}{r}){\rm d}^3\vec{r'}$$
+
 ---
