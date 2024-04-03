@@ -198,6 +198,6 @@ $\vec{B}=\nabla\times\vec{A}$
 $$\nabla\cdot\vec{B}=\nabla\cdot(\nabla\times\vec{A})=0$$
 
 我们知道由于电荷守恒：
-$$\frac{{\rm d}}{{\rm d}t}\int_{\Omega} \rho(\vec{r'}){\rm d}^3\vec{r'}=\oint_{\partial \Omega}\vec{J}(\vec{r'})\cdot{\rm d}\vec{S'} \\\\ \Rightarrow\int_{\Omega} \frac{\partial}{\partial t}\rho(\vec{r'}){\rm d}^3\vec{r'}=\oint_{\partial \Omega}\vec{J}(\vec{r'})\cdot{\rm d}\vec{S'}\\\\ \Rightarrow\int_{\Omega} \frac{\partial}{\partial t}\rho(\vec{r'}){\rm d}^3\vec{r'}=\int_\Omega\nabla'\cdot\vec{J}(\vec{r'}){\rm d}^3\vec{r'}\\\\ \Rightarrow\int_{\Omega} \Big(\frac{\partial}{\partial t}\rho(\vec{r'})-\nabla'\cdot\vec{J}(\vec{r'})\Big){\rm d}^3\vec{r'}=0$$
+
 
 ---
