@@ -232,4 +232,41 @@ $$\nabla_x\times\vec{B}(\vec{x})=\mu_0\vec{J}(\vec{x})$$
 
 至此，我们得到了毕-萨实验定律的数学推论。
 
+这时我们可以总结出：
+
+$$\begin{cases} \nabla \cdot \vec{E}=\frac{\rho}{\varepsilon_0} \\\\ \nabla\times\vec{E}=0\\\\  \nabla \cdot\vec{B}=0 \\\\ \nabla\times\vec{B}=\mu_0\vec{J}\end{cases}$$
+
+这直接是两个实验定律的数学推论，对电磁场的散度和旋度进行了一定程度的描述。
+
+如果电和磁没有关系，那故事就到此为止了。但是实际上他们之间有互相转换的关系，法拉第发现感生电场（从感应电动势总结）。我们回顾一下什么是电场，会使静止电荷响应的场就是电场（试探电荷来帮助我们认知是否有电场），所以把变化的磁场产生电动势的机制，看作是产生了电场，是一种自然的观点。
+
+$$\oint_{\partial D}\vec{E}\cdot{\rm d}\vec{l}=-\frac{ {\rm d}}{ {\rm d}t}\int_D\vec{B}\cdot{\rm d}\vec{S}$$
+
+这就是法拉第的电磁感应定律，电动势和磁通量的变化量有关。 $D$ 本身变化时用洛伦磁力或者说安培力就可以解释，这是电磁学中的认知。我们直接考虑 $D$ 不动的情况，此时磁场变化，可以将方程写为：
+
+$$\oint_{\partial D}\vec{E}\cdot{\rm d}\vec{l}=-\int_D\frac{\partial}{\partial t}\vec{B}\cdot{\rm d}\vec{S}$$
+
+用Stokes公式，有：
+
+$$\int_{D}(\nabla\times\vec{E})\cdot{\rm d}\vec{l}=-\int_D\frac{\partial}{\partial t}\vec{B}\cdot{\rm d}\vec{S}$$
+
+由 $D$ 任意性，得： $\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}$
+
+这是对感生电场的描述，如果将这种电场与我们原来讨论的静电场合成，自然还是有这一点。也就是说，电场的旋度总和磁场的随时变化有关。
+
+这时方程变为：
+
+$$\begin{cases} \nabla \cdot \vec{E}=\frac{\rho}{\varepsilon_0} \\\\ \nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t} \\\\  \nabla \cdot\vec{B}=0 \\\\ \nabla\times\vec{B}=\mu_0\vec{J}\end{cases}$$
+
+我们已经知道了磁能生电，并加到了这组方程当中。问题是没有电回到磁的机制，也就是说如果电磁规律如此，那么某种程度上宇宙中电场会远多于磁场。从一些哲学思辨中（比如《斐多篇》中苏格拉底关于生与死相互转换的讨论），我们可以有这样的信念——磁应该也要能生电。（注：这里关于哲学的引证只是一种阐释，其实也有不能相互转换的东西，比如热能这种无序的能量不能再不付出任何代价地变成有序的能量，其实关键的是对理论本身的理解以及提出猜想可能的理由）
+
+也许我们应该把 $\frac{\partial \vec{E}}{\partial t}$ 这样的项放入到方程里面。
+
+观察到最后一个式子： $\nabla\times\vec{B}=\mu_0\vec{J}$ ，实际上描述了一个旋度场，取散度一定是0：
+
+$$0=\nabla\cdot\vec{J}$$
+
+也就是这个方程一定只在电流分布是稳恒电流时成立。虽然这是实验室里大部分时候出现的情况，但是实际上在达到稳恒电流的过程中这个条件是不成立的，极端地，在有电容器时，这个条件其实很好破坏。这很大程度上限制了这个方程的使用范围。
+
+
 ---
