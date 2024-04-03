@@ -567,7 +567,7 @@ $$\begin{align}V(r,\theta)=\sum_{l=0}^\infty A_lr^lP_l(\cos \theta)\quad r < R \
 >
 >而由勒让德多项式的Rodrigues公式：
 >
->$$P_l(x)=\frac{1}{2^l l!}\frac{{\rm d}^l}{{\rm d}x^l}(x^2-1)^l$$
+>$$P_l(x)=\frac{1}{2^l l!}\frac{ {\rm d}^l}{ {\rm d}x^l}(x^2-1)^l$$
 >
 >取 $x=1$ 时，上述求导的多项式中，凡是留有 $(x^2-1)$ 的多项式的项，一定为0。所以每一次必须求到 $(x^2-1)$ 上（稍微列一下就清楚了）,有：
 >
