@@ -15,7 +15,3 @@ As a normal student, I don't have any research results yet. But I wrote some not
 如果你是我的同学，是来查看是否有作业还寄存在我这的，可以去[Teaching](https://nihilisticfries.github.io/teaching/)目录下寻找。（点这里也可以）
 
 If you are my classmate aiming to check whether your homework is still in my place, please go to [Teaching](https://nihilisticfries.github.io/teaching/).(click)
-
-<span id="busuanzi_container_site_pv">    
-	本站总访问量<span id="busuanzi_value_site_pv"></span>次
-</span>
