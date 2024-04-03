@@ -15,7 +15,7 @@ location: "Wuhan, China"
 前言：这里我期望完成对电动力学理论框架的构建，是课程随笔，不过已经在纸质笔记本上预演过要写什么。之后我会尽量以我最满意的方式将电动力学的内容梳理出来。
 
 ## 目录
-> 1 Maxwell方程组<br> $\quad$ 1.1 真空中Maxwell方程组的归纳<br> $\quad$ 1.2 Maxwell方程组的对称性<br> $\quad$ 1.3 介质中的Maxwell方程组 <br>2 静电学 <br> $\quad$ 2.1 静电学基本方程 <br> $\quad$ 2.2 格林函数法 <br> $\quad$ 2.3 静电唯一性定理<br> $\quad$ 2.4 导体组的静电平衡 <br> $\quad$ 2.5 用分离变量法求解 <br> $\quad$ 2.6 多极展开
+> 1 Maxwell方程组<br> $\quad$ [1.1 真空中Maxwell方程组的归纳](https://github.com/NihilisticFries/NihilisticFries.github.io/edit/master/_notes/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6notes.md#11-%E7%9C%9F%E7%A9%BA%E4%B8%ADmaxwell%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E5%BD%92%E7%BA%B3)<br> $\quad$ 1.2 Maxwell方程组的对称性<br> $\quad$ 1.3 介质中的Maxwell方程组 <br>2 静电学 <br> $\quad$ 2.1 静电学基本方程 <br> $\quad$ 2.2 格林函数法 <br> $\quad$ 2.3 静电唯一性定理<br> $\quad$ 2.4 导体组的静电平衡 <br> $\quad$ 2.5 用分离变量法求解 <br> $\quad$ 2.6 多极展开
 
 ## Chapter 1 Maxwell方程组
 
@@ -295,3 +295,44 @@ $$\begin{cases} \nabla \cdot \vec{E}=\frac{\rho}{\varepsilon_0} \\\\ \nabla\time
 这个方程可以给出若干预言，后来被实验证实，在这些小心求证的基础上，我们认为那个大胆的假设是正确的。至此，我们也完成了真空中Maxwell方程组的归纳。
 
 ---
+
+### 1.2 Maxwell方程组的对称性
+
+
+
+
+---
+
+
+### 1.3 介质中的Maxwell方程组
+
+在结束了一些对真空中Maxwell方程组对称性的观察之后，我们来引入一些唯象的参量，将有介质的环境中的电磁场被纳入Maxwell方程组的考量中。
+
+鉴于电动力学本身其实是一个较为经典的理论，所以这里提出的介质对外场响应的微观模型是较为经典的。电介质对电场的响应我们用原子分子的极化（转向极化、色散极化等等）来阐述；磁介质对磁场的响应我们用分子电流假说来阐述。
+
+首先考虑极化。电介质在外电场的驱使下，电介质中的微观粒子会发生以下几种图像：
+> (1) 原子/分子本身是电中性且正负电荷的中心是重合的，这时加一个电场，正负电荷会有相反运动的趋势，导致这些粒子整体电中性但正电荷中心和负电荷中心分离开来一段距离，可以等价地看作一个电偶极子。（2.6多极展开的观点看会更清晰，相当于保留多极展开的第二项）称为色散极化 <br> (2) 对于有的原子/分子本身其正负电荷的中心就不重合，那么在外电场的作用下，它们会转向使能量更低
+
+在这些图像下，会导致电介质中有一个电偶极子的分布，这些电偶极子会激发电场，改变原电场。所以现在我们需要研究电偶极子分布场激发的电场。
+
+对于一个电偶极子，我们考察离散的情况，即两个电荷量大小相等符号相反的两个点电荷，分开一个距离$d$，定义电偶极子的方向是从负电荷指向正电荷，那么：
+$$\vec{p}=q\vec{d}$$
+定义为一个电偶极子的偶极矩。
+
+我们考虑这样一个带点客体激发的电势场，那么就会有：
+
+$$\begin{align}V(\vec{r})=\frac{q}{4\pi\varepsilon_0}(\frac{1}{r_{+}}-\frac{1}{r_-})=\frac{q}{4\pi\varepsilon_0}(\frac{1}{\sqrt{r^2+d^2/4-rd\cos{\theta}}}-\frac{1}{\sqrt{r^2+d^2/4+rd\cos{\theta}}})\\\\ =\frac{q}{4\pi\varepsilon_0 r}(\frac{1}{\sqrt{1-(\frac{d}{r})\cos{\theta}+(\frac{d}{2r})^2}}-\frac{1}{\sqrt{1+(\frac{d}{r})\cos{\theta}+(\frac{d}{2r})^2}})\end{align}$$
+
+考虑 $d << r$ 略去二阶小量，进行泰勒展开
+
+$$\begin{align}V(\vec{r})&=\frac{q}{4\pi\varepsilon_0 r}((1-(-\frac{1}{2})(\frac{d}{r})\cos{\theta})-(1+(-\frac{1}{2})(\frac{d}{r})\cos{\theta}))\\\\& =\frac{q}{4\pi\varepsilon_0 r}(\frac{d}{2r}\cos\theta-(-\frac{d}2{r}\cos\theta))\\\\ &=\frac{qd\cos\theta}{4\pi\varepsilon_0 r^2}=\frac{\vec{p}\cdot\hat{r}}{4\pi\varepsilon_0r^2}\end{align}$$
+
+所以电偶极子在宏观上会激发一个 $r^{-2}$ 衰减的一个电势场
+
+不妨模仿将电荷变为电荷密度场，我们将电偶极子变为「电偶极子场」，实际上唯象地称为极化强度 $\vec{P}$ ：
+$$\vec{P}(\vec{r'}):=\lim_{\Delta V \to 0}\frac{\sum\vec{p}}{\Delta V}$$
+
+总之就是去描述密度，这样，自然地电势场为：
+$$V(\vec{x})=\int_\Omega\frac{\vec{P}(\vec{r'})\cdot\hat{r}}{4\pi\varepsilon_0r^2}{\rm d}^3\vec{r'}$$
+
+那么我们可以
