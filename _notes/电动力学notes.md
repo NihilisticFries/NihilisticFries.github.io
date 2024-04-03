@@ -15,7 +15,7 @@ location: "Wuhan, China"
 前言：这里我期望完成对电动力学理论框架的构建，是课程随笔，不过已经在纸质笔记本上预演过要写什么。之后我会尽量以我最满意的方式将电动力学的内容梳理出来。
 
 ## 目录
-> 1 Maxwell方程组<br> $\quad$ 1.1 真空中Maxwell方程组的归纳<br> $\quad$ 1.2 Maxwell方程组的对称性<br> $\quad$ 1.3 介质中的Maxwell方程组 <br>2 静电学 <br> $\quad$ 2.1 静电学基本方程 <br> $\quad$ 2.2 格林函数法 <br> $\quad$ 2.3 静电唯一性定理<br> $\quad$ 2.4 导体组的静电平衡 <br> $\quad$ 2.5 用分离变量法求解 <br> $\quad$ 2.6 多极展开
+> 1 Maxwell方程组<br> $\quad$ 1.1 真空中Maxwell方程组的归纳<br> $\quad$ 1.2 Maxwell方程组的对称性<br> $\quad$ 1.3 介质中的Maxwell方程组 <br>2 静电学 <br> $\quad$ 2.1 静电学基本方程 <br> $\quad$ 2.2 格林函数法 <br> $\quad$ 2.3 静电唯一性定理<br> $\quad$ 2.4 导体组的静电平衡 <br> $\quad$ 2.5 用分离变量法求解 <br> $\quad$ 2.6 多极展开 <br> 3 静磁学
 
 ## Chapter 1 Maxwell方程组
 
@@ -627,7 +627,8 @@ $$V(\vec{x})=\sum_{l=0}^\infty\frac{1}{4\pi\varepsilon_0x^{l+1}}\int_\Omega {r'}
  
  我们退回简单的两个带相反等大电荷的点电荷情况：
  
-$$\begin{align}\int_\Omega r'\rho(\vec{r'})\cos \alpha{\rm d}^3\vec{r'}&=\int_\Omega r'(q\delta(\vec{r'}-\vec{r_+})-q\delta(\vec{r'}-\vec{r_-}))\cos \alpha{\rm d}^3\vec{r'}\\\\&=q(r_+\cos \alpha_+-r_-\cos \alpha_-)\\\\& = q(r_+(\hat{r} _+\cdot\hat{x}) - r_+(\hat{r} _+\cdot\hat{x}))\end{align}$$
+$$\begin{align}\int_\Omega r'\rho(\vec{r'})\cos \alpha{\rm d}^3\vec{r'}&=\int_\Omega r'(q\delta(\vec{r'}-\vec{r_+})-q\delta(\vec{r'}-\vec{r_-}))\cos \alpha{\rm d}^3\vec{r'}\\\\&=q(r_+\cos \alpha_+-r_-\cos \alpha_-)\\\\& = q(r_ +(\hat{r} _ +\cdot\hat{x}) - r_ - (\hat{r} 
+ _- \cdot\hat{x}) )\\\\& = q(\vec{r _+}-\vec{r _-})\cdot\hat{x}\\\\& = \vec{p}\cdot\hat{x}\end{align}$$
  
 这时电势场写为:
 
@@ -649,7 +650,7 @@ $$V(\vec{x})=\frac{q}{4\pi\varepsilon_0x}+\frac{\vec{p}\cdot\hat{x}}{4\pi\vareps
 
 我们可以考虑多极展开的第二项：
 
-$$4\pi\varepsilon_0x^3V_2(\vec{x})=\int _\Omega r'^2\rho(\vec{r'})P_2(\cos \alpha){\rm d}^3\vec{r'}=\frac{1}{2}\int_\Omega r'^2\rho(\vec{r'})(3\cos^2\alpha-1){\rm d}^3\vec{r'}$$
+$$4\pi\varepsilon _0 x^3 V _2(\vec{x})=\int _\Omega r'^2\rho(\vec{r'})P _2(\cos \alpha){\rm d}^3\vec{r'}=\frac{1}{2}\int _\Omega r'^2\rho(\vec{r'})(3\cos^2\alpha-1){\rm d}^3\vec{r'}$$
 
 这时我们记 $\vec{r'}=(r_1',r_2',r_3')^T$ ， $\hat{x}=(x_1,x_2,x_3)^T$ ，显然 $x_1^2+x_2^2+x_3^2=x_ix_j\delta_{ij}=1$
 
@@ -657,11 +658,11 @@ $$4\pi\varepsilon_0x^3V_2(\vec{x})=\int _\Omega r'^2\rho(\vec{r'})P_2(\cos \alph
 
 $$4\pi\varepsilon_0x^3V_2(\vec{x})=\frac{1}{2}\int_\Omega \rho(\vec{r'})(3(\vec{r'}\cdot\hat{x})^2-r'^2){\rm d}^3\vec{r'}$$
 
-观察 $(3(\vec{r'}\cdot\hat{x})^2-r'^2)=3r'_ix_ir_j'x_j-r'^2x_ix_j\delta_{ij}=(3r'_ir'_j-r'^2\delta_{ij})x_ix_j$
+观察 $(3(\vec{r'}\cdot\hat{x})^2-r'^2)=3r' _ix _ir _j'x _j-r'^2x _ix _j\delta _{ij}=(3r' _ir' _j-r'^2\delta _{ij})x _ix _j$
 
 这是一个关于 $x_1,x_2,x_3$ 的二次型，我们期望将其写成矩阵形式。显然可以定义：
 
-$$\hat{A}(\vec{r'}):=\begin{bmatrix} 2r'^2_1-r_2'^2-r_3'^2 & 3r_1'r_2' & 3r'_1r'_3 \\ 3r_2'r_1' & 2r'^2_2-r_3'^2-r_1'^2 & 3r_2'r_3' \\ 3r_3'r_1' & 3r_3'r_2' & 2r'^2_3-r_1'^2-r_2'^2 \end{bmatrix}$$
+$$\hat{A}(\vec{r'}):=\begin{bmatrix} 2r'^2_1-r_2'^2-r_3'^2 & 3r_1'r_2' & 3r'_1r'_3 \\\\ 3r_2'r_1' & 2r'^2_2-r_3'^2-r_1'^2 & 3r_2'r_3' \\\\ 3r_3'r_1' & 3r_3'r_2' & 2r'^2_3-r_1'^2-r_2'^2 \end{bmatrix}$$
 
 那么就可以写出：
 
@@ -673,7 +674,7 @@ $$\hat{Q}:=\frac{1}{2}\int_\Omega \rho(\vec{r'})\hat{A}(\vec{r'}){\rm d}^3\vec{r
 
 或者直接写矩阵元：
 
-$$Q_{ij}:=\frac{1}{2}\int_\Omega \rho(\vec{r'})(3r'_ir_j'-r'^2\delta_{ij}){\rm d}^3\vec{r'}$$
+$$Q_{ij}:=\frac{1}{2}\int_\Omega \rho(\vec{r'})(3r' _ir _j'-r'^2\delta _{ij}){\rm d}^3\vec{r'}$$
 
 即是带电体的四极矩 $\hat{Q}$ ，可以有：
 
@@ -683,4 +684,4 @@ $$V_2(\vec{x})=\frac{\hat{x}^T \hat{Q}\hat{x}}{4\pi\varepsilon_0x^3}$$
 
 接下来的八极矩、十六极矩就不讨论了。因为许多情况下四极矩已经足够精确，另外一个就是我现在确实不会（
 
-## Chapter 3
+## Chapter 3 静磁学
