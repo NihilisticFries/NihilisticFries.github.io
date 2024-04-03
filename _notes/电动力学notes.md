@@ -394,16 +394,24 @@ $$V(\vec{x})=\int_{\infty}-G(\vec{x}\mid\vec{r'})\frac{\rho_0(\vec{r'})}{\vareps
  
  >定理1：好齐次边界条件格林函数具有对称性 <br> $$G(\vec{r_1}\mid\vec{r_2})=G(\vec{r_2}\mid\vec{r_1})$$
 
->证明：考虑 $G(\vec{r}|\vec{r_2})\delta(\vec{r}-\vec{r_1})-G(\vec{r}|\vec{r_1})\delta(\vec{r}-\vec{r_2})$ ，显然对 $\Omega_j$ 积分有：
+>证明：考虑 $G(\vec{r}\mid\vec{r_2})\delta(\vec{r}-\vec{r_1})-G(\vec{r}\mid\vec{r_1})\delta(\vec{r}-\vec{r_2})$ ，显然对 $\Omega_j$ 积分有：
 >
->$$\int_{\Omega_j}[G(\vec{r}|\vec{r_2})\delta(\vec{r}-\vec{r_1})-G(\vec{r}|\vec{r_1})\delta(\vec{r}-\vec{r_2})]{\rm d}^3\vec{r}=G(\vec{r_1}|\vec{r_2})-G(\vec{r_2}|\vec{r_1})$$
+>$$\int_{\Omega_j}[G(\vec{r}\mid\vec{r_2})\delta(\vec{r}-\vec{r_1})-G(\vec{r}\mid\vec{r_1})\delta(\vec{r}-\vec{r_2})]{\rm d}^3\vec{r}=G(\vec{r_1}\mid\vec{r_2})-G(\vec{r_2}\mid\vec{r_1})$$
 >
 ><br>另一方面：
-> $\delta(\vec{r}-\vec{r_i})=\nabla^2G(\vec{r}|\vec{r_i})\quad i=1,2$ 则：
+> $\delta(\vec{r}-\vec{r_i})=\nabla^2G(\vec{r}\mid\vec{r_i})\quad i=1,2$ 则：
 >
->$$G(\vec{r_1}|\vec{r_2})-G(\vec{r_2}|\vec{r_1})=\int_{\Omega_j}[G(\vec{r}|\vec{r_2})\nabla^2G(\vec{r}|\vec{r_1})-G(\vec{r}|\vec{r_1})\nabla^2G(\vec{r}|\vec{r_2})]{\rm d}^3\vec{r}$$
-><br>又由高斯公式：$$\int_\Omega(\psi\nabla^2\phi-\phi\nabla^2\psi){\rm d}V=\oint_{\partial\Omega}(\psi\partial_n\phi-\phi\partial_n\psi){\rm d}S$$则：$$G(\vec{r_1}|\vec{r_2})-G(\vec{r_2}|\vec{r_1})=\int_{\Omega_j}[G(\vec{r}|\vec{r_2})\partial_nG(\vec{r}|\vec{r_1})-G(\vec{r}|\vec{r_1})\partial_nG(\vec{r}|\vec{r_2})]{\rm d}S$$<br>又边界条件$\alpha G(\vec{r}|\vec{r_i})+\beta \partial_n G(\vec{r}|\vec{r_i})=B(\vec{x})|_{\vec{x}\in\partial\Omega_j}\quad i=1,2$告诉我们$(G(\vec{r}|\vec{r_i}),\partial_nG(\vec{r}|\vec{r_i}))$是共线的，或者说平行，自然有：$$G(\vec{r}|\vec{r_2})\partial_nG(\vec{r}|\vec{r_1})-G(\vec{r}|\vec{r_1})\partial_nG(\vec{r}|\vec{r_2})=0$$即$G(\vec{r_1}|\vec{r_2})-G(\vec{r_2}|\vec{r_1})=0$，则 $G(\vec{r_1}|\vec{r_2})=G(\vec{r_2}|\vec{r_1})$
-一个显然的推论即是：$$\nabla^2G(\vec{x}|\vec{r'})=\nabla'^2G(\vec{r'}|\vec{x})$$
+>$$G(\vec{r_1}\mid\vec{r_2})-G(\vec{r_2}\mid\vec{r_1})=\int_{\Omega_j}[G(\vec{r}\mid\vec{r_2})\nabla^2G(\vec{r}\mid\vec{r_1})-G(\vec{r}\mid\vec{r_1})\nabla^2G(\vec{r}\mid\vec{r_2})]{\rm d}^3\vec{r}$$
+><br>又由高斯公式：
+>$$\int_\Omega(\psi\nabla^2\phi-\phi\nabla^2\psi){\rm d}V=\oint_{\partial\Omega}(\psi\partial_n\phi-\phi\partial_n\psi){\rm d}S$$
+>则：
+>$$G(\vec{r_1}\mid\vec{r_2})-G(\vec{r_2}\mid\vec{r_1})=\int_{\Omega_j}[G(\vec{r}\mid\vec{r_2})\partial_nG(\vec{r}\mid\vec{r_1})-G(\vec{r}\mid\vec{r_1})\partial_nG(\vec{r}\mid\vec{r_2})]{\rm d}S$$
+><br>又边界条件 $\alpha G(\vec{r}\mid\vec{r_i})+\beta \partial_n G(\vec{r}\mid\vec{r_i})=B(\vec{x})\mid_{\vec{x}\in\partial\Omega_j}\quad i=1,2$ 告诉我们 $(G(\vec{r}\mid\vec{r_i}),\partial_nG(\vec{r}\mid\vec{r_i}))$ 是共线的，或者说平行，自然有：
+>
+>$$G(\vec{r}\mid\vec{r_2})\partial_nG(\vec{r}\mid\vec{r_1})-G(\vec{r}\mid\vec{r_1})\partial_nG(\vec{r}\mid\vec{r_2})=0$$即$G(\vec{r_1}\mid\vec{r_2})-G(\vec{r_2}\mid\vec{r_1})=0$
+>，则 $G(\vec{r_1}\mid\vec{r_2})=G(\vec{r_2}\mid\vec{r_1})$
+一个显然的推论即是：
+>$$\nabla^2G(\vec{x}\mid\vec{r'})=\nabla'^2G(\vec{r'}\mid\vec{x})$$
 
 在这样对称性的启发下，我们构造：
 $$\int_{\Omega_j}[V(\vec{r'})\nabla'^2G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\nabla'^2V(\vec{r'})]{\rm d}^3\vec{r'}\\=\int_{\Omega_j}[V(\vec{r'})\nabla'^2\delta(\vec{r'}-\vec{x})-G(\vec{r'}|\vec{x})\nabla'^2V(\vec{r'})]{\rm d}^3\vec{r'}\\=V(\vec{x})-\int_{\Omega_j}G(\vec{x}|\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}$$
