@@ -132,7 +132,7 @@ $\vec{K}$ 被称为面电流密度，有 ${\rm d}a$ 是小面元：
 
 $$K{\rm d} l_{\parallel}=\frac{ {\rm d} q}{ {\rm d} t}=\frac{ {\rm d} q}{ {\rm d} a}\frac{ {\rm d} a}{ {\rm d} t }=\sigma\frac{ {\rm d} a}{ {\rm d}t}=\sigma\frac{ {\rm d}l_{\perp}}{ {\rm d}t}{\rm d} l_{\parallel}$$
 
-进而有:$\vec{K}=\sigma \vec{v}$
+进而有: $\vec{K}=\sigma \vec{v}$
 
 那么这个面受到的洛伦兹力：
 
@@ -160,7 +160,7 @@ $$\vec{B}(\vec{x})=\int_\Gamma \frac{\mu_0}{4\pi}\frac{I{\rm d}\vec{r'}\times\ha
 这是用电流元做实验得到的结果，经过上述定义，可以自然地推广：
 $$I=\vec{J}\cdot{\rm d}\vec{S}=\vec{K}\cdot{\rm d}\vec{l}$$
 
-自然地$I{\rm d}\vec{r'}$表征了电流方向，有：
+自然地 $I{\rm d}\vec{r'}$ 表征了电流方向，有：
 
 $$I{\rm d}\vec{r'}=\vec{J}{\rm d}V=\vec{K}{\rm d}a$$
 
@@ -216,7 +216,10 @@ $$\begin{align}\nabla_x\times\vec{B}(\vec{x})&=\nabla_x\times(\nabla_x\times\vec
 $$\begin{align}\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'} & = \frac{\mu_0}{4\pi}\int_\Omega\vec{J}(\vec{r'})\cdot(\nabla'(-\frac{1}{r})){\rm d}^3\vec{r'}\\\\ &=\frac{\mu_0}{4\pi}\Big(\int_\Omega\big(\vec{J}(\vec{r'})\cdot(\nabla'(-\frac{1}{r}))+(-\frac{1}{r})\nabla'\cdot\vec{J}(\vec{r'})\big){\rm d}^3\vec{r'}\Big)+\frac{\mu_0}{4\pi}\int_\Omega\frac{\nabla'\cdot\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\\\\ &=\frac{\mu_0}{4\pi}\int_\Omega\nabla'\cdot(-\frac{\vec{J}(\vec{r'})}{r}){\rm d}^3\vec{r'}+\frac{\mu_0}{4\pi}\int_\Omega\frac{\nabla'\cdot\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\\\\ &=-\frac{\mu_0}{4\pi}\int_{\partial\Omega}\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}+\frac{\mu_0}{4\pi}\int_\Omega\frac{\nabla'\cdot\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\end{align}$$
 
 我们对我们考虑的电流场做两个基本的假设：
-> （1）电流场是稳恒电流场，即 $\nabla'\cdot\vec{J}(\vec{r'})\equiv 0$ <br> （2）我们考虑的积分域 $\Omega$ 囊括了一个连通的有电流密度的区域，即 $\vec{J}(\vec{r'})|_{\vec{r'}\in {\partial \Omega}}\equiv \vec{0}$
+ 
+ （1）电流场是稳恒电流场，即 $\nabla'\cdot\vec{J}(\vec{r'})\equiv 0$ 
+ 
+ （2）我们考虑的积分域 $\Omega$ 囊括了一个连通的有电流密度的区域，即 $\vec{J}(\vec{r'})|_{\vec{r'}\in {\partial \Omega}}\equiv \vec{0}$
 
 这是两个很合理的假设，这是我们在实验上很容易达到的情况，我们实验上的导线形成的回路就会很快稳定下来形成一个稳恒电流场；同时电流场常常只是分布在一个流通的有界区域内（导线内）。
 
