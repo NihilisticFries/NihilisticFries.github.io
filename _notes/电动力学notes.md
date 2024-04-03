@@ -597,7 +597,7 @@ $$\frac{1}{\sqrt{1+r^2-2r\cos\theta}}=\sum_{l=0}^\infty r^lP_l(\cos \theta)$$
 
 $$V(\vec{x})=\int_\Omega\frac{\rho(\vec{r'})}{4\pi\varepsilon_0r}{\rm d}^3\vec{r'}$$
 
-实际上，这样的计算是复杂的。因为本质上， $r$ 是由 $\vec{x},\vec{r'}$ 共同决定的。其实也可以直接写出 $r=|\vec{x}-\vec{r'}|$ ，这也就是余弦定理，可以令 $\vec{x},\vec{r'}$ 夹角为 $\alpha$ ，有：
+实际上，这样的计算是复杂的。因为本质上， $r$ 是由 $\vec{x},\vec{r'}$ 共同决定的。其实也可以直接写出 $r=\mid\vec{x}-\vec{r'}\mid$ ，这也就是余弦定理，可以令 $\vec{x},\vec{r'}$ 夹角为 $\alpha$ ，有：
 
 $$\frac{1}{r}=\frac{1}{\sqrt{x^2+r'^2-2xr'\cos\alpha}}$$
 
