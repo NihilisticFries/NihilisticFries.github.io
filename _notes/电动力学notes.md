@@ -336,3 +336,44 @@ $$\vec{P}(\vec{r'}):=\lim_{\Delta V \to 0}\frac{\sum\vec{p}}{\Delta V}$$
 $$V(\vec{x})=\int_\Omega\frac{\vec{P}(\vec{r'})\cdot\hat{r}}{4\pi\varepsilon_0r^2}{\rm d}^3\vec{r'}$$
 
 那么我们可以
+
+---
+
+## Chapter 2 静电学
+
+### 2.1 静电学基本方程
+
+我们看到电磁场的一般规律是：
+
+$$\begin{cases} \nabla \cdot \vec{D}=\rho_0 \\\\ \nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\\\\  \nabla \cdot\vec{B}=0 \\\\ \nabla\times\vec{H}=\vec{J}_0+\frac{\partial\vec{D}}{\partial t}\end{cases}$$
+
+我们此处只讨论线性各向同性介质的情况: $\vec{D}=\varepsilon\vec{E}$
+
+静电学问题即考虑可以定义普通电势的情况：要求一个带电体系激发的电场不再发生变化 $\varepsilon\frac{\partial\vec{E}}{\partial t}=\frac{\partial\vec{D}}{\partial t}=0$ ，且电势可以良好定义 $\nabla\times\vec{E}=0$ ，此时关于电场的方程可以完全分离出来
+
+$$\begin{cases} \nabla \cdot \vec{D}=\rho_0 \\\\ \nabla\times\vec{E}=0 \end{cases}$$
+
+空间中填满了分块的不同的线性各向同性材料，但是在一个局部（非介质分界面），我们总有 $\varepsilon$ 是一个常数，直接写出事实上的方程：
+
+$$\begin{cases} \nabla \cdot \vec{E}=\frac{\rho_0}{\varepsilon} \\\\ \nabla\times\vec{E}=0 \end{cases}$$
+
+或者可以直接定义电势： $\vec{E}=-\nabla V$ ，得到静电学基本方程：
+
+$$\nabla^2V=-\frac{\rho_0}{\varepsilon}$$
+
+注意，这就是我们所谓的静电平衡，是一个状态。我们用这个方程描述系统的前提是达到了静电平衡。所以静电平衡的方程不描述过程，所以在用本章的结论思考达到静电平衡的过程时是不合适的，不过许多高中生会乐于此。
+
+静电学基本方程是一个Poission方程。其求解在数学上已有充分的讨论。
+
+这里描述一种极其简单的情况，无限大真空空间。此时 $\nabla^2V=-\frac{\rho_0}{\varepsilon_0}$ ，解显然可以表述为：
+
+$$V(\vec{x})=\int_{\infty}\frac{\rho_0(\vec{r'})}{4\pi\epsilon_0r}{\rm d}^3\vec{r'}$$
+
+这是我们从库伦定律直接得到的观察，实际上也是格林函数解法的直接推论。
+
+考虑到 $\nabla^2\frac{1}{r}=-4\pi\delta(\vec{x}-\vec{r'})$ ，有：
+
+$\nabla^2G(\vec{x}|\vec{r'})=\delta(\vec{x}-\vec{r'})$ 的解为： $G(\vec{x}|\vec{r'})=-\frac{1}{4\pi r}$ ，进而有：
+$$V(\vec{x})=\int_{\infty}-G(\vec{x}|\vec{r'})\frac{\rho_0(\vec{r'})}{\varepsilon_0}{\rm d}^3\vec{r'}=\int_{\infty}\frac{\rho_0(\vec{r'})}{4\pi\epsilon_0r}{\rm d}^3\vec{r'}$$
+
+在讨论静电问题时，其实就是在考虑静电学基本方程的解，为了方便，我们选取无穷远处为参考点，此时无穷远处电势为0，这是电势极其相关微分运算得到的场应当在全空间上的积分是收敛的，或者说去一个极大的球壳保住我们考虑的体系，场在这个球壳上的面积分应当是0。
