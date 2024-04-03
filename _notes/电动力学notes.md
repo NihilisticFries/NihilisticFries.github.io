@@ -146,4 +146,15 @@ $$\vec{J}\cdot{\rm d}\vec{S}=\frac{ {\rm d}q}{ {\rm d}t}=\frac{ {\rm d}q}{ {\rm 
 
 再利用 $\vec{J}\cdot{\rm d}\vec{S}=J{\rm d}a_\perp$ ， ${\rm d}V={\rm d}a_{\perp}{\rm d}l_{\parallel}$
 
+$$J=\rho\frac{ {\rm d}l_{\parallel}}{ {\rm d}t}\Rightarrow\vec{J}=\rho\vec{v}$$
+
+进一步，我们可以有整个三维体受力：
+$$\vec{F}=\int_\Omega\vec{v}\times\vec{B}{\rm d}q=\int_\Omega(\rho\vec{v})\times\vec{B}{\rm d}V=\int_\Omega\vec{J}\times\vec{B}{\rm d}V$$
+
+总之我们用各种方式定义了各种层面上的电流“密度”。
+
+在实验上，我们也发现磁场是由运动的电荷激发的，有毕-萨公式：
+
+$$\vec{B}(\vec{x})=\int_\Gamma \frac{\mu_0}{4\pi}\frac{I{\rm d}\vec{r'}\times\hat{r}}{r^2}$$
+
 ---
