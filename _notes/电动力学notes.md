@@ -114,6 +114,18 @@ $$ I  :=\frac{ {\rm d} q }{ {\rm d} t } $$
 
 即单位时间经过线上某点的电荷量，一般由稳恒电流假设，认为线上各处（没有分支）电流是相等的。这时可以确定这条线上有一个不随时间变化的电荷线密度 $\lambda$ ，这时考虑一个电流线的受力情况：
 
+$$\vec{F}=\int_{\Gamma}\vec{v}\times\vec{B}{\rm d}q=\int_{\Gamma}  (\lambda\vec{v})\times\vec{B}{\rm d}l$$
 
+而 $I=\frac{{\rm d}q}{{\rm d}t}=\frac{{\rm d}q}{{\rm d}l}\frac{{\rm d}l}{{\rm d}t}=\lambda v$ ，则可取：
+
+$$\vec{F}=I\int_\Gamma {\rm d}\vec{l}\times\vec{B}$$
+
+这就是电流线在磁场中受安培力的表达式。
+
+如果考虑一个二维面上有运动的电荷，可以看作在二维面上有一个矢量场 $\vec{K}$ ，为表征流向（一维的时候不用定方向，因为线的切矢已经定义好方向了）所以定义成了矢量，本质上是二维面上的切空间中的矢量。
+
+可以这样表征流过面上某个线段元的电荷量：
+
+$${\rm d}q=\vec{K}\cdot{\rm d}\vec{l}{\rm d}t$$
 
 ---
