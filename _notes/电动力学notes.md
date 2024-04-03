@@ -128,4 +128,9 @@ $$\vec{F}=I\int_\Gamma {\rm d}\vec{l}\times\vec{B}$$
 
 $${\rm d}q=\vec{K}\cdot{\rm d}\vec{l}{\rm d}t$$
 
+$\vec{K}$ 被称为面电流密度，有 ${\rm d}a$ 是小面元：
+
+$$K{\rm d} l_{\parallel}=\frac{ {\rm d} q}{ {\rm d} t}=\frac{ {\rm d} q}{ {\rm d} a}\frac{ {\rm d} a}{ {\rm d} t }=\sigma\frac{ {\rm d} a}{ {\rm d}t}=\sigma\frac{ {\rm d}l_{\perp}}{ {\rm d}t}{\rm d} l_{\parallel}$$
+
+
 ---
