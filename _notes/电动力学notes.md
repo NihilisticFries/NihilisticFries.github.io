@@ -132,5 +132,18 @@ $\vec{K}$ 被称为面电流密度，有 ${\rm d}a$ 是小面元：
 
 $$K{\rm d} l_{\parallel}=\frac{ {\rm d} q}{ {\rm d} t}=\frac{ {\rm d} q}{ {\rm d} a}\frac{ {\rm d} a}{ {\rm d} t }=\sigma\frac{ {\rm d} a}{ {\rm d}t}=\sigma\frac{ {\rm d}l_{\perp}}{ {\rm d}t}{\rm d} l_{\parallel}$$
 
+进而有:$\vec{K}=\sigma \vec{v}$
+
+那么这个面受到的洛伦兹力：
+
+$$\vec{F}=\int_D\vec{v}\times\vec{B}{\rm d}q=\int_D(\sigma\vec{v})\times\vec{B}{\rm d}a=\int_D\vec{K}\times\vec{B}{\rm d}a$$
+
+再进一步，考虑三维空间中的电荷移动，可以定义电流密度，单位时间内通过某个元面的电荷量有：
+$${\rm d}q=\vec{J}\cdot{\rm d}\vec{S}{\rm d}t$$
+
+可以推出：
+$$\vec{J}\cdot{\rm d}\vec{S}=\frac{ {\rm d}q}{ {\rm d}t}=\frac{ {\rm d}q}{ {\rm d}V}\frac{ {\rm d}V}{ {\rm d}t}=\rho\frac{ {\rm d}V}{ {\rm d}t}$$
+
+再利用 $\vec{J}\cdot{\rm d}\vec{S}=J{\rm d}a_\perp$ ， ${\rm d}V={\rm d}a_{\perp}{\rm d}l_{\parallel}$
 
 ---
