@@ -219,7 +219,7 @@ $$\begin{align}\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1
  
  （1）电流场是稳恒电流场，即 $\nabla'\cdot\vec{J}(\vec{r'})\equiv 0$ 
  
- （2）我们考虑的积分域 $\Omega$ 囊括了一个连通的有电流密度的区域，即 $\vec{J}(\vec{r'})|_{\vec{r'}\in {\partial \Omega}}\equiv \vec{0}$
+ （2）我们考虑的积分域 $\Omega$ 囊括了一个连通的有电流密度的区域，即 $\vec{J}(\vec{r'})\mid_{\vec{r'}\in {\partial \Omega}}\equiv \vec{0}$
 
 这是两个很合理的假设，这是我们在实验上很容易达到的情况，我们实验上的导线形成的回路就会很快稳定下来形成一个稳恒电流场；同时电流场常常只是分布在一个流通的有界区域内（导线内）。
 
