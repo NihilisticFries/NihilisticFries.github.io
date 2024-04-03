@@ -402,31 +402,40 @@ $$V(\vec{x})=\int_{\infty}-G(\vec{x}\mid\vec{r'})\frac{\rho_0(\vec{r'})}{\vareps
 > $\delta(\vec{r}-\vec{r_i})=\nabla^2G(\vec{r}\mid\vec{r_i})\quad i=1,2$ 则：
 >
 >$$G(\vec{r_1}\mid\vec{r_2})-G(\vec{r_2}\mid\vec{r_1})=\int_{\Omega_j}[G(\vec{r}\mid\vec{r_2})\nabla^2G(\vec{r}\mid\vec{r_1})-G(\vec{r}\mid\vec{r_1})\nabla^2G(\vec{r}\mid\vec{r_2})]{\rm d}^3\vec{r}$$
-><br>又由高斯公式：
+>
+>又由高斯公式：
+>
 >$$\int_\Omega(\psi\nabla^2\phi-\phi\nabla^2\psi){\rm d}V=\oint_{\partial\Omega}(\psi\partial_n\phi-\phi\partial_n\psi){\rm d}S$$
 >则：
->$$G(\vec{r_1}\mid\vec{r_2})-G(\vec{r_2}\mid\vec{r_1})=\int_{\Omega_j}[G(\vec{r}\mid\vec{r_2})\partial_nG(\vec{r}\mid\vec{r_1})-G(\vec{r}\mid\vec{r_1})\partial_nG(\vec{r}\mid\vec{r_2})]{\rm d}S$$
-><br>又边界条件 $\alpha G(\vec{r}\mid\vec{r_i})+\beta \partial_n G(\vec{r}\mid\vec{r_i})=B(\vec{x})\mid_{\vec{x}\in\partial\Omega_j}\quad i=1,2$ 告诉我们 $(G(\vec{r}\mid\vec{r_i}),\partial_nG(\vec{r}\mid\vec{r_i}))$ 是共线的，或者说平行，自然有：
 >
->$$G(\vec{r}\mid\vec{r_2})\partial_nG(\vec{r}\mid\vec{r_1})-G(\vec{r}\mid\vec{r_1})\partial_nG(\vec{r}\mid\vec{r_2})=0$$即$G(\vec{r_1}\mid\vec{r_2})-G(\vec{r_2}\mid\vec{r_1})=0$
->，则 $G(\vec{r_1}\mid\vec{r_2})=G(\vec{r_2}\mid\vec{r_1})$
+>$$G(\vec{r_1}\mid\vec{r_2})-G(\vec{r_2}\mid\vec{r_1})=\int_{\Omega_j}[G(\vec{r}\mid\vec{r_2})\partial_nG(\vec{r}\mid\vec{r_1})-G(\vec{r}\mid\vec{r_1})\partial_nG(\vec{r}\mid\vec{r_2})]{\rm d}S$$
+>
+>又边界条件 $\alpha G(\vec{r}\mid\vec{r_i})+\beta \partial_n G(\vec{r}\mid\vec{r_i})=B(\vec{x})\mid_{\vec{x}\in\partial\Omega_j}\quad i=1,2$ 告诉我们 $(G(\vec{r}\mid\vec{r_i}),\partial_nG(\vec{r}\mid\vec{r_i}))$ 是共线的，或者说平行，自然有：
+>
+>$$G(\vec{r}\mid\vec{r_2})\partial_nG(\vec{r}\mid\vec{r_1})-G(\vec{r}\mid\vec{r_1})\partial_nG(\vec{r}\mid\vec{r_2})=0$$ 即 
+ $G(\vec{r_1}\mid\vec{r_2})-G(\vec{r_2}\mid\vec{r_1})=0$
+>
+>则 $G(\vec{r_1}\mid\vec{r_2})=G(\vec{r_2}\mid\vec{r_1})$
 一个显然的推论即是：
 >$$\nabla^2G(\vec{x}\mid\vec{r'})=\nabla'^2G(\vec{r'}\mid\vec{x})$$
 
 在这样对称性的启发下，我们构造：
-$$\int_{\Omega_j}[V(\vec{r'})\nabla'^2G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\nabla'^2V(\vec{r'})]{\rm d}^3\vec{r'}\\=\int_{\Omega_j}[V(\vec{r'})\nabla'^2\delta(\vec{r'}-\vec{x})-G(\vec{r'}|\vec{x})\nabla'^2V(\vec{r'})]{\rm d}^3\vec{r'}\\=V(\vec{x})-\int_{\Omega_j}G(\vec{x}|\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}$$
+
+$$\begin{align}\int_{\Omega_j}[V(\vec{r'})\nabla'^2G(\vec{r'}\mid\vec{x})-G(\vec{r'}\mid\vec{x})\nabla'^2V(\vec{r'})]{\rm d}^3\vec{r'}& =\int_{\Omega_j}[V(\vec{r'})\nabla'^2\delta(\vec{r'}-\vec{x})-G(\vec{r'}\mid\vec{x})\nabla'^2V(\vec{r'})]{\rm d}^3\vec{r'}\\\\& =V(\vec{x})-\int_{\Omega_j}G(\vec{x}\mid\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}\end{align}$$
+
 因此我们构造出解：
-$$V(x)=\int_{\Omega_j}[V(\vec{r'})\nabla'^2G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\nabla'^2V(\vec{r'})]{\rm d}^3\vec{r'}+\int_{\Omega_j}G(\vec{x}|\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}\\=\int_{\Omega_j}G(\vec{x}|\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}+\int_{\partial\Omega_j}[V(\vec{r'})\partial_n'G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\partial_n'V(\vec{r'})]{\rm d}S'$$
+
+$$\begin{align}V(x)&=\int_{\Omega_j}[V(\vec{r'})\nabla'^2G(\vec{r'}\mid\vec{x})-G(\vec{r'}\mid\vec{x})\nabla'^2V(\vec{r'})]{\rm d}^3\vec{r'}+\int_{\Omega_j}G(\vec{x}\mid\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}\\\\& =\int_{\Omega_j}G(\vec{x}\mid\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}+\int_{\partial\Omega_j}[V(\vec{r'})\partial_n'G(\vec{r'}\mid\vec{x})-G(\vec{r'}\mid\vec{x})\partial_n'V(\vec{r'})]{\rm d}S'\end{align}$$
 
 有两种处理面积分的路径：
-$V(\vec{r'})\partial_n'G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\partial_n'V(\vec{r'})|_{\vec{r'}\in\partial\Omega_j}\\=V(\vec{r'})[\frac{\alpha}{\beta}G(\vec{r'}|\vec{x})+\partial_n'G(\vec{r'}|\vec{x})]|_{\vec{r'}\in\partial\Omega_j}-G(\vec{r'}|\vec{x})[\frac{\alpha}{\beta}V(\vec{r'})+\partial_n'V(\vec{r'})]|_{\vec{r'}\in\partial\Omega_j}\\=-\frac{1}{\beta}G(\vec{x}|\vec{r'})B(\vec{r'})|_{\vec{r'}\in\Omega_j}$
+ $V(\vec{r'})\partial_n'G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\partial_n'V(\vec{r'})|_{\vec{r'}\in\partial\Omega_j}\\=V(\vec{r'})[\frac{\alpha}{\beta}G(\vec{r'}|\vec{x})+\partial_n'G(\vec{r'}|\vec{x})]|_{\vec{r'}\in\partial\Omega_j}-G(\vec{r'}|\vec{x})[\frac{\alpha}{\beta}V(\vec{r'})+\partial_n'V(\vec{r'})]|_{\vec{r'}\in\partial\Omega_j}\\=-\frac{1}{\beta}G(\vec{x}|\vec{r'})B(\vec{r'})|_{\vec{r'}\in\Omega_j}$
 
 或者：
-$V(\vec{r'})\partial_n'G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\partial_n'V(\vec{r'})|_{\vec{r'}\in\partial\Omega_j}\\=-\partial_n'V(\vec{r'})[G(\vec{r'}|\vec{x})+\frac{\beta}{\alpha}\partial_n'G(\vec{r'}|\vec{x})]|_{\vec{r'}\in\partial\Omega_j}+\partial_n'G(\vec{r'}|\vec{x})[V(\vec{r'})+\frac{\beta}\alpha \partial_nV(\vec{r'})]|_{\vec{r'}\in\partial\Omega_j}\\=\frac{1}{\alpha}\partial_nG(\vec{x}|\vec{r'})B(\vec{r'})|_{\vec{r'}\in\Omega_j}$
+ $V(\vec{r'})\partial_n'G(\vec{r'}|\vec{x})-G(\vec{r'}|\vec{x})\partial_n'V(\vec{r'})|_{\vec{r'}\in\partial\Omega_j}\\=-\partial_n'V(\vec{r'})[G(\vec{r'}|\vec{x})+\frac{\beta}{\alpha}\partial_n'G(\vec{r'}|\vec{x})]|_{\vec{r'}\in\partial\Omega_j}+\partial_n'G(\vec{r'}|\vec{x})[V(\vec{r'})+\frac{\beta}\alpha \partial_nV(\vec{r'})]|_{\vec{r'}\in\partial\Omega_j}\\=\frac{1}{\alpha}\partial_nG(\vec{x}|\vec{r'})B(\vec{r'})|_{\vec{r'}\in\Omega_j}$
 
 即我们可以给出形式上的解：
-$$V(\vec{x})=\int_{\Omega_j}G(\vec{x}|\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}-\frac{1}{\beta}\int_{\partial\Omega_j}G(\vec{x}|\vec{r'})B(\vec{r'}){\rm d}S'$$
-$$V(\vec{x})=\int_{\Omega_j}G(\vec{x}|\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}+\frac{1}{\alpha}\int_{\partial\Omega_j}\partial_nG(\vec{x}|\vec{r'})B(\vec{r'}){\rm d}S'$$
+$$V(\vec{x})=\int_{\Omega_j}G(\vec{x}\mid\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}-\frac{1}{\beta}\int_{\partial\Omega_j}G(\vec{x}\mid\vec{r'})B(\vec{r'}){\rm d}S'$$
+$$V(\vec{x})=\int_{\Omega_j}G(\vec{x}\mid\vec{r'})f(\vec{r'}){\rm d}^3\vec{r'}+\frac{1}{\alpha}\int_{\partial\Omega_j}\partial_nG(\vec{x}\mid\vec{r'})B(\vec{r'}){\rm d}S'$$
 
 可见求出格林函数，解就是唯一的了，而格林函数的求解实际上是困难的，但至少由格林函数边界条件的齐次性，我们可以断言其存在且唯一，所以对于这样的方程，解总是存在且唯一。
 
