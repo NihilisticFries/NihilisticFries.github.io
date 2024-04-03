@@ -271,5 +271,27 @@ $$0=\nabla\cdot\vec{J}$$
 
 也就是这个方程一定只在电流分布是稳恒电流时成立。虽然这是实验室里大部分时候出现的情况，但是实际上在达到稳恒电流的过程中这个条件是不成立的，极端地，在有电容器时，这个条件其实很好破坏。这很大程度上限制了这个方程的使用范围。
 
+我们希望考虑最一般的情况，即不一定有 $\nabla\cdot\vec{J}=0$ 成立时，应该如何。这时我们可以增加一个信念——电荷守恒。如果我们相信电荷守恒（实际上实验中正是如此，没有观察到过电荷的消失，它们只是转移），那其实总有 $\nabla\cdot\vec{J}+\frac{\partial \rho}{\partial t}=0$
+
+那么我们可以写出：
+
+$$\nabla\cdot(\nabla\times\vec{B})=\mu_0(\nabla\cdot\vec{J}+\frac{\partial \rho}{\partial t})$$
+
+这是总成立的，注意到 $\rho=\varepsilon_0\nabla\cdot\vec{E}$
+
+可以写出：
+$$\nabla\cdot(\nabla\times\vec{B})=\mu_0(\nabla\cdot\vec{J}+\varepsilon_0\nabla\cdot\frac{\partial \vec{E}}{\partial t})=\nabla\cdot(\mu_0\vec{J}+\varepsilon_0\mu_0\frac{\partial \vec{E}}{\partial t})$$
+
+于是这里我们就做一个大胆的猜测：
+
+$$\nabla\times\vec{B}=\mu_0\vec{J}+\varepsilon_0\mu_0\frac{\partial \vec{E}}{\partial t}$$
+
+实际上可以认为有一种等效电流云云，在电磁学中介绍过的位移电流假说，这便是Maxwell的天才工作。方程被写为：
+
+$$\begin{cases} \nabla \cdot \vec{E}=\frac{\rho}{\varepsilon_0} \\\\ \nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t} \\\\  \nabla \cdot\vec{B}=0 \\\\ \nabla\times\vec{B}=\mu_0\vec{J}+\varepsilon_0\mu_0\frac{\partial \vec{E}}{\partial t}\end{cases}$$
+
+这个方程也便就是真空中的Maxwell方程组。
+
+这个方程可以给出若干预言，后来被实验证实，在这些小心求证的基础上，我们认为那个大胆的假设是正确的。至此，我们也完成了真空中Maxwell方程组的归纳。
 
 ---
