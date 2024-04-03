@@ -513,7 +513,7 @@ $$W=\frac{1}{2}\sum_i V_i\oint_{\partial\Omega_i}\sigma_i{\rm d}S_i=\frac{1}{2}\
 
 >考虑一个球面（半径为 $R$ ）上有自由电荷（一个面电荷密度的形式给出），空间中其它位置都是真空，那么可以以这个球心为球坐标原点，我们要求电荷分布有一个旋转对称性，即取 $\phi$ 维度上的电荷分布相同，电荷分布完全由 $\sigma(\theta)$ 给出。有电势场 $V(r,\theta)$ 。显然，我们要求解不能发散。
 
-首先分离变量，我们知道球谐函数有 $Y_l^m(\theta,\phi)=\sqrt{\frac{2l+1}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}P^{|m|}_l(\cos\theta)e^{im\phi}$ 。但是在 $\phi$ 维度上有旋转对称性，解不应该显含 $\phi$ ，这说明只能有： $m=0$ 此时， $P_l(\cos\theta)$  成为了我们解在 $\theta$ 维度上的的完备展开级数表示.
+首先分离变量，我们知道球谐函数有 $Y_l^m(\theta,\phi)=\sqrt{\frac{2l+1}{4\pi}\frac{(l-\mid m\mid)!}{(l+\mid m\mid)!}}P^{\mid m\mid}_l(\cos\theta)e^{im\phi}$ 。但是在 $\phi$ 维度上有旋转对称性，解不应该显含 $\phi$ ，这说明只能有： $m=0$ 此时， $P_l(\cos\theta)$  成为了我们解在 $\theta$ 维度上的的完备展开级数表示.
 
 解为: $V(r,\theta)=\sum^\infty_{l=0} R_l(r)P_l(\cos \theta)$
 
