@@ -56,11 +56,11 @@ $\vec{r}$
 有关的场）
 
 对于某个试探电荷 $Q$ ，其受到库仑力：
-$$\vec{F}=Q(\sum_i\frac{q_i}{4\pi\varepsilon_0r_i^2})$$
+$$\vec{F}=Q(\sum_i\frac{q_i}{4\pi\varepsilon_0r_i^2}\hat{r_i})$$
 
 由于力的矢量合原理，我们直接得到了电场的叠加原理：
 
-$$\vec{E}=\sum_i\frac{q_i}{4\pi\varepsilon_0r_i^2}$$
+$$\vec{E}=\sum_i\frac{q_i}{4\pi\varepsilon_0r_i^2}\hat{r_i}$$
 
 同时也给出了电场的定义，一个点电荷系激发的电场就是如此计算的。
 
@@ -206,5 +206,9 @@ $$\begin{aligned}\frac{ {\rm d}}{ {\rm d}t}\int_{\Omega} \rho(\vec{r'}){\rm d}^3
 对于一个电流分布，我们认为其对应的电荷密度分布不变，也就是实验上常考虑的稳恒电流情况，这时 $\frac{\partial \rho}{\partial t}=0$ ，这就直接对电流密度加了一个很强的约束：
 
 $$\nabla\cdot\vec{J}=0$$
+
+参考电场的考虑，现在考虑磁场的旋度，为了方便，可以直接考虑磁矢势：
+
+$$\begin{align}\nabla_x\times\vec{B}(\vec{x})&=\nabla_x\times(\nabla_x\times\vec{A}(\vec{x}))\\\\& =\nabla_x(\nabla_x\cdot\vec{A}(\vec{x}))-\nabla_x^2\vec{A}(\vec{x})\\\\& =\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\nabla_x\cdot\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'})-\int_\Omega\frac{\mu_0}{4\pi}\nabla_x^2\frac{\vec{J}(\vec{r'})}{r}{\rm d}^3\vec{r'}\\\\& =\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})-\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\nabla^2\frac{1}{r}{\rm d}^3\vec{r'}\\\\& =\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})-\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})(-4\pi\delta(\vec{x}-\vec{r'})){\rm d}^3\vec{r'}\\\\& =\int_\Omega\mu_0\vec{J}(\vec{r'})\delta(\vec{x}-\vec{r'}){\rm d}^3\vec{r'}+\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})\\\\& =\mu_0\vec{J}(\vec{x})+\nabla_x(\int_\Omega\frac{\mu_0}{4\pi}\vec{J}(\vec{r'})\cdot(\nabla\frac{1}{r}){\rm d}^3\vec{r'})\end{align}$$
 
 ---
