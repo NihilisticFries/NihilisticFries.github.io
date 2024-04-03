@@ -503,5 +503,90 @@ $$W=\frac{1}{2}\sum_i V_i\oint_{\partial\Omega_i}\sigma_i{\rm d}S_i=\frac{1}{2}\
 更深刻地，静电平衡时各导体的电势和各导体带电量之间是一个线性变换的关系。这本质是线性方程（叠加原理）的结果。这允许我们定义电容系数。
 
 ---
+### 2.5 用分离变量法求解
+
+实际上，除了猜测解外，我们从来没有给过一个实际的解法。我们现在只论述了导体组静电平衡时，解一定是唯一的而已。现在，我们可以用一些解pde的常用手段解方程。实际上我们在数学物理方法中也知道，我们能手解的pde极其有限，只有在特定形状的边界条件下，pde才能手解出一个级数形式。
+
+大部分情况下，这无非是数学物理方法的习题。不过我们想把某些级数解直接当作结论，或者说，一种通解的形式，裱起来。
+
+这里，我们选取最具有代表性的，物理中最喜欢的球对称性进行求解。
+
+>考虑一个球面（半径为 $R$ ）上有自由电荷（一个面电荷密度的形式给出），空间中其它位置都是真空，那么可以以这个球心为球坐标原点，我们要求电荷分布有一个旋转对称性，即取 $\phi$ 维度上的电荷分布相同，电荷分布完全由 $\sigma(\theta)$ 给出。有电势场 $V(r,\theta)$ 。显然，我们要求解不能发散。
+
+首先分离变量，我们知道球谐函数有 $Y_l^m(\theta,\phi)=\sqrt{\frac{2l+1}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}P^{|m|}_l(\cos\theta)e^{im\phi}$ 。但是在 $\phi$ 维度上有旋转对称性，解不应该显含 $\phi$ ，这说明只能有： $m=0$ 此时， $P_l(\cos\theta)$  成为了我们解在 $\theta$ 维度上的的完备展开级数表示.
+
+解为: $V(r,\theta)=\sum^\infty_{l=0} R_l(r)P_l(\cos \theta)$
+
+此时径向分离变量结果为：
+
+$$\begin{align}\frac{ {\rm d}}{ {\rm d}r}(r^2\frac{ {\rm d}}{ {\rm d}r}R(r))-l(l+1)R(r)=0\\\\ \Rightarrow r^2\frac{{\rm d}^2}{{\rm d}r^2}R(r)+2r\frac{ {\rm d}}{ {\rm d}r}R(r)-l(l+1)R(r)=0\end{align}$$   
+
+这是一个欧拉方程，在常微分方程中讨论过这一方程的求解办法。令 $t=\ln r$，记 $D\equiv\frac{ {\rm d}}{ {\rm d}t}=\frac{ {\rm d}r}{ {\rm d}t}\frac{ {\rm d}}{ {\rm d}r}=r\frac{ {\rm d}}{ {\rm d}r}$，$y(t)\equiv R(r)$ ，得：
+
+$$D(D-1)y+2Dy-l(l+1)y=0 \Rightarrow D^2y+Dy-l(l+1)y=0$$
+
+有本征方程： $\lambda^2+\lambda-l(l+1)=0$ ，解得  $\lambda_1=l\quad \lambda_2=-(l+1)$
+
+即 $R(r)=y(t)=C_1e^{l\ln r}+C_2e^{-(l+1)\ln r}=C_1r^l+C_2\frac{1}{r^{l+1}}$
+
+所以方程的级数解为：
+
+$$V(r,\theta)=\sum_{l=0}^\infty A_lr^lP_l(\cos \theta)+\frac{B_l}{r^{l+1}}P_l(\cos \theta)$$
+
+特别地，由于电势场在没有点电荷处不能发散，在球壳内，场不发散，即不能取负幂次项，所以必有 $B_l=0$ 。相似的，在球壳外，也不能发散，不然能量无穷大，不符合物理，场在无穷远要收敛，所以 $A_l=0$
+
+通解为:
+
+$$\begin{align}V(r,\theta)=\sum_{l=0}^\infty A_lr^lP_l(\cos \theta)\quad r < R \\\\ V(r,\theta)=\sum_{l=0}^\infty  \frac{B_l}{r^{l+1}}P_l(\cos \theta)\quad r > R \end{align}$$
+
+利用 $\sigma(\theta)$ 来确定这些系数，无非是本征函数展开而已。
+
+这里例解一种极其简单地情况：
+>一个带点量为 $q$ 的点电荷激发的电势场。取原点为距离该点电荷 $a$ 的一个空间点，从该空间点到这个点电荷的射线形成 $z$ 轴。求电势分布。
+
+>解：显然绕 $z$ 轴的 $\phi$ 维度上，体系有旋转对称性。可以直接用级数通解表示：
+>
+>$$V(r,\theta)=
+>\begin{cases}\sum_{l=0}^\infty A_lr^lP_l(\cos \theta)\quad r < a \\\\ \sum_{l=0}^\infty \frac{B_l}{r^{l+1}}P_l(\cos \theta)\quad r > a \end{cases}$$
+>
+>但实际上，很显然这个解可以用余弦定理和库伦定律直接写出：
+>
+>$$V(r,\theta)=\frac{q}{4\pi\varepsilon_0\sqrt{a^2+r^2-2ar\cos\theta}}$$
+>
+>考虑 $r < a$ 的部分,有：
+>
+>$$\frac{q}{4\pi\varepsilon_0\sqrt{a^2+r^2-2ar\cos\theta}}=\sum_{l=0}^\infty A_lr^lP_l(\cos \theta)\quad r < a$$
+>
+> 取 $\cos \theta=1$ ,有
+>
+>$$\begin{align}\frac{q}{4\pi\varepsilon_0\sqrt{(a-r)^2}}=\sum_{l=0}^\infty A_lr^lP_l(1)\quad r < a\\\\ \Rightarrow\frac{q}{4\pi\varepsilon_0 (a-r)}=\sum_{l=0}^\infty A_lr^lP_l(1)\quad r < a\\\\ \Rightarrow\frac{q}{4\pi\varepsilon_0a}\frac{1}{1-\frac{r}{a}}=\sum_{l=0}^\infty A_lr^lP_l(1)\quad r < a\\\\ \Rightarrow\frac{q}{4\pi\varepsilon_0a}\sum_{l=0}^\infty(\frac{r}{a})^l=\sum_{l=0}^\infty A_lr^lP_l(1)\quad r < a\end{align}$$
+>
+>所以对比系数得到：
+>
+>$$A_l=\frac{q}{4\pi\varepsilon_0a^{l+1}}\frac{1}{P_l(1)}$$
+>
+>而由勒让德多项式的Rodrigues公式：
+>
+>$$P_l(x)=\frac{1}{2^l l!}\frac{{\rm d}^l}{{\rm d}x^l}(x^2-1)^l$$
+>
+>取 $x=1$ 时，上述求导的多项式中，凡是留有 $(x^2-1)$ 的多项式的项，一定为0。所以每一次必须求到 $(x^2-1)$ 上（稍微列一下就清楚了）,有：
+>
+>$$P_l(1)=\frac{1}{2^ll!}l!(2x)^l|_{x=1}+0=1$$
+>
+>所以
+>
+>$$A_l=\frac{q}{4\pi\varepsilon_0a^{l+1}}$$
+>
+>即
+>
+>$$\frac{q}{4\pi\varepsilon_0\sqrt{a^2+r^2-2ar\cos\theta}}=\frac{q}{4\pi\varepsilon_0a}\sum_{l=0}^\infty \frac{r^l}{a^l}P_l(\cos \theta)\quad r < a $$
+>
+>我们其实得到了势能场在球壳内的级数解形式。
+
+这里，我们取 $a=1\quad q=4\pi\varepsilon_0$ ，有：
+
+$$\frac{1}{\sqrt{1+r^2-2r\cos\theta}}=\sum_{l=0}^\infty r^lP_l(\cos \theta)$$
+
+这个等式也是所谓的勒让德多项式母函数。
 
 ## Chapter 3
