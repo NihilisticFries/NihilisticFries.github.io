@@ -589,4 +589,98 @@ $$\frac{1}{\sqrt{1+r^2-2r\cos\theta}}=\sum_{l=0}^\infty r^lP_l(\cos \theta)$$
 
 这个等式也是所谓的勒让德多项式母函数。
 
+---
+
+### 2.6 多极展开
+
+我们现在退回到无穷大真空空间当中。考虑一个有界区域 $\Omega$ 分布有电荷密度场，这个电荷密度区域会激发什么样的电势场？这个问题解析上我们可以回答：
+
+$$V(\vec{x})=\int_\Omega\frac{\rho(\vec{r'})}{4\pi\varepsilon_0r}{\rm d}^3\vec{r'}$$
+
+实际上，这样的计算是复杂的。因为本质上， $r$ 是由 $\vec{x},\vec{r'}$ 共同决定的。其实也可以直接写出 $r=|\vec{x}-\vec{r'}|$ ，这也就是余弦定理，可以令 $\vec{x},\vec{r'}$ 夹角为 $\alpha$ ，有：
+
+$$\frac{1}{r}=\frac{1}{\sqrt{x^2+r'^2-2xr'\cos\alpha}}$$
+
+这样的积分式是复杂的，如果能写成 $r'$ 的多项式，看上去会好很多。从2.5中的讨论可以直接有：
+
+$$\frac{1}{\sqrt{x^2+r'^2-2xr'\cos\alpha}}=\sum_{l=0}^\infty\frac{r'^l}{x^{l+1}}P_l(\cos\alpha)$$
+
+所以我们可以写出：
+
+$$V(\vec{x})=\sum_{l=0}^\infty\frac{1}{4\pi\varepsilon_0x^{l+1}}\int_\Omega {r'}^lP_l(\cos \alpha)\rho(\vec{r'}){\rm d}^3\vec{r'}$$
+
+我们本质上其实是对原本精确的积分表达式做了一个洛朗展开。此时可以看出每一项貌似都有一些物理意义。在 $\Omega$ 为一个有界区域时，取下 $x>>r'$：
+ 
+ 如果可以略去 $(\frac{r'}{x})^l$ 的高阶项，比如只留第一项（ $P_0(x)=1$ ）：
+ 
+ $$V(\vec{x})=\frac{1}{4\pi\varepsilon_0 x}\int_\Omega\rho(\vec{r'}){\rm d}^3\vec{r'}$$
+ 
+ 这时相当于带电客体相对于我们考虑的空间来说是极小的，这个表达式即将 $\Omega$ 直看成一个点电荷，电势场就近似是对应带电量点电荷激发的电势场。
+
+ 我们显著地看到了对积分的简化。这是一种很好的近似手段，不过这也促使我们好奇其它项有没有什么物理意义。它们其实可以看作对点电荷场的一些修正项。
+
+ 考虑保留两项时：（ $P_1(x)=x$ ）
+ 
+ $$V(\vec{x})=\frac{1}{4\pi\varepsilon_0 x}\int_\Omega\rho(\vec{r'}){\rm d}^3\vec{r'}+\frac{1}{4\pi\varepsilon_0x^2}\int_\Omega r'\rho(\vec{r'})\cos \alpha{\rm d}^3\vec{r'}$$
+
+ 这修正项看着像电偶极子激发的电势场。
+ 
+ 我们退回简单的两个带相反等大电荷的点电荷情况：
+ 
+$$\begin{align}\int_\Omega r'\rho(\vec{r'})\cos \alpha{\rm d}^3\vec{r'}&=\int_\Omega r'(q\delta(\vec{r'}-\vec{r_+})-q\delta(\vec{r'}-\vec{r_-}))\cos \alpha{\rm d}^3\vec{r'}\\\\&=q(r_+\cos \alpha_+-r_-\cos \alpha_-)\\\\& = q(r_+(\hat{r} _+\cdot\hat{x}) - r_+(\hat{r} _+\cdot\hat{x}))\end{align}$$
+ 
+这时电势场写为:
+
+$$V(\vec{x})=\frac{\vec{p}\cdot\hat{x}}{4\pi\varepsilon_0x^2}$$
+
+这和我们之前对 $d << x$ 情况下的电偶极子推导结果是相同的。
+
+我们认为可以定义一种更加广泛的偶极矩:
+
+$$\vec{p}:=\int_\Omega\vec{r'}\rho(\vec{r'}){\rm d}^3\vec{r'}$$
+
+那么就有
+
+$$V(\vec{x})=\frac{q}{4\pi\varepsilon_0x}+\frac{\vec{p}\cdot\hat{x}}{4\pi\varepsilon_0x^2}$$
+
+这种定义下，偶极矩可能会与坐标原点的选取有关。
+
+其余项对应的多极具体意义？
+
+我们可以考虑多极展开的第二项：
+
+$$4\pi\varepsilon_0x^3V_2(\vec{x})=\int _\Omega r'^2\rho(\vec{r'})P_2(\cos \alpha){\rm d}^3\vec{r'}=\frac{1}{2}\int_\Omega r'^2\rho(\vec{r'})(3\cos^2\alpha-1){\rm d}^3\vec{r'}$$
+
+这时我们记 $\vec{r'}=(r_1',r_2',r_3')^T$ ， $\hat{x}=(x_1,x_2,x_3)^T$ ，显然 $x_1^2+x_2^2+x_3^2=x_ix_j\delta_{ij}=1$
+
+这时，可以将第二项写为：
+
+$$4\pi\varepsilon_0x^3V_2(\vec{x})=\frac{1}{2}\int_\Omega \rho(\vec{r'})(3(\vec{r'}\cdot\hat{x})^2-r'^2){\rm d}^3\vec{r'}$$
+
+观察 $(3(\vec{r'}\cdot\hat{x})^2-r'^2)=3r'_ix_ir_j'x_j-r'^2x_ix_j\delta_{ij}=(3r'_ir'_j-r'^2\delta_{ij})x_ix_j$
+
+这是一个关于 $x_1,x_2,x_3$ 的二次型，我们期望将其写成矩阵形式。显然可以定义：
+
+$$\hat{A}(\vec{r'}):=\begin{bmatrix} 2r'^2_1-r_2'^2-r_3'^2 & 3r_1'r_2' & 3r'_1r'_3 \\ 3r_2'r_1' & 2r'^2_2-r_3'^2-r_1'^2 & 3r_2'r_3' \\ 3r_3'r_1' & 3r_3'r_2' & 2r'^2_3-r_1'^2-r_2'^2 \end{bmatrix}$$
+
+那么就可以写出：
+
+$$4\pi\varepsilon_0x^3V_2(\vec{x})=\hat{x}^T\Big(\frac{1}{2}\int_\Omega \rho(\vec{r'})\hat{A}(\vec{r'}){\rm d}^3\vec{r'}\Big)\hat{x}$$
+
+进而定义：
+
+$$\hat{Q}:=\frac{1}{2}\int_\Omega \rho(\vec{r'})\hat{A}(\vec{r'}){\rm d}^3\vec{r'}$$
+
+或者直接写矩阵元：
+
+$$Q_{ij}:=\frac{1}{2}\int_\Omega \rho(\vec{r'})(3r'_ir_j'-r'^2\delta_{ij}){\rm d}^3\vec{r'}$$
+
+即是带电体的四极矩 $\hat{Q}$ ，可以有：
+
+$$V_2(\vec{x})=\frac{\hat{x}^T \hat{Q}\hat{x}}{4\pi\varepsilon_0x^3}$$
+
+可以看出来，这里我是为了不引入张量的概念强行用二次型的方式表述了这一点，将四极矩写成了矩阵的形式。实际上，还有两种处理方式，一种是许多传统电动教材使用并矢来描述四极矩；二是直接引入张量的概念，这是一个(0,2)型张量，与两个矢量作用得到一个数，是一个多重线性映射。
+
+接下来的八极矩、十六极矩就不讨论了。因为许多情况下四极矩已经足够精确，另外一个就是我现在确实不会（
+
 ## Chapter 3
