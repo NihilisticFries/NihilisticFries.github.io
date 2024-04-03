@@ -116,7 +116,7 @@ $$ I  :=\frac{ {\rm d} q }{ {\rm d} t } $$
 
 $$\vec{F}=\int_{\Gamma}\vec{v}\times\vec{B}{\rm d}q=\int_{\Gamma}  (\lambda\vec{v})\times\vec{B}{\rm d}l$$
 
-而 $I=\frac{{\rm d}q}{{\rm d}t}=\frac{{\rm d}q}{{\rm d}l}\frac{{\rm d}l}{{\rm d}t}=\lambda v$ ，则可取：
+而 $I=\frac{ {\rm d} q}{ {\rm d} t}=\frac{ {\rm d} q}{ {\rm d} l}\frac{ {\rm d} l}{ {\rm d} t}=\lambda v$ ，则可取：
 
 $$\vec{F}=I\int_\Gamma {\rm d}\vec{l}\times\vec{B}$$
 
