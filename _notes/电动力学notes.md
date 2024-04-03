@@ -373,7 +373,7 @@ $$V(\vec{x})=\int_{\infty}\frac{\rho_0(\vec{r'})}{4\pi\epsilon_0r}{\rm d}^3\vec{
 
 考虑到 $\nabla^2\frac{1}{r}=-4\pi\delta(\vec{x}-\vec{r'})$ ，有：
 
-$\nabla^2G(\vec{x}|\vec{r'})=\delta(\vec{x}-\vec{r'})$ 的解为： $G(\vec{x}|\vec{r'})=-\frac{1}{4\pi r}$ ，进而有：
-$$V(\vec{x})=\int_{\infty}-G(\vec{x}|\vec{r'})\frac{\rho_0(\vec{r'})}{\varepsilon_0}{\rm d}^3\vec{r'}=\int_{\infty}\frac{\rho_0(\vec{r'})}{4\pi\epsilon_0r}{\rm d}^3\vec{r'}$$
+$\nabla^2G(\vec{x}\mid\vec{r'})=\delta(\vec{x}-\vec{r'})$ 的解为： $G(\vec{x}\mid\vec{r'})=-\frac{1}{4\pi r}$ ，进而有：
+$$V(\vec{x})=\int_{\infty}-G(\vec{x}\mid\vec{r'})\frac{\rho_0(\vec{r'})}{\varepsilon_0}{\rm d}^3\vec{r'}=\int_{\infty}\frac{\rho_0(\vec{r'})}{4\pi\epsilon_0r}{\rm d}^3\vec{r'}$$
 
 在讨论静电问题时，其实就是在考虑静电学基本方程的解，为了方便，我们选取无穷远处为参考点，此时无穷远处电势为0，这是电势极其相关微分运算得到的场应当在全空间上的积分是收敛的，或者说去一个极大的球壳保住我们考虑的体系，场在这个球壳上的面积分应当是0。
